@@ -1,0 +1,18 @@
+ARG TRITON_IMAGE=nvcr.io/nvidia/tritonserver:26.07-py3
+FROM ${TRITON_IMAGE}
+ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app HF_HOME=/cache/hf HOME=/home/mmrag \
+    TOKENIZERS_PARALLELISM=false XLA_PYTHON_CLIENT_PREALLOCATE=false
+WORKDIR /app
+# The bundled Python backend stub uses Python 3.12; do not replace its interpreter.
+RUN python3 -c 'import sys; assert sys.version_info[:2] == (3,12), sys.version'
+COPY requirements-api.txt requirements-models.txt ./
+RUN python3 -m pip install --break-system-packages --no-cache-dir \
+      torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu130 \
+ && python3 -m pip install --break-system-packages --no-cache-dir -r requirements-models.txt \
+ && python3 -m pip check \
+ && python3 -m pip freeze > /app/installed-requirements.txt \
+ && mkdir -p /cache/hf /gpu-lock /home/mmrag && chown -R 10001:10001 /cache /gpu-lock /home/mmrag
+COPY stack ./stack
+COPY triton ./models
+USER 10001:10001
+# Each container explicitly loads only its own model via --load-model.

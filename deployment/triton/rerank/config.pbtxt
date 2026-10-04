@@ -1,0 +1,16 @@
+name: "rerank"
+backend: "python"
+max_batch_size: 8
+input [ { name: "INPUT" data_type: TYPE_STRING dims: [1] } ]
+output [ { name: "OUTPUT" data_type: TYPE_FP32 dims: [1] } ]
+instance_group [ { count: 1 kind: KIND_GPU gpus: [0] } ]
+version_policy { specific { versions: [1] } }
+dynamic_batching {
+  preferred_batch_size: [2, 4, 8]
+  max_queue_delay_microseconds: 2000
+  default_queue_policy {
+    max_queue_size: 8
+    default_timeout_microseconds: 10000000
+    timeout_action: REJECT
+  }
+}
