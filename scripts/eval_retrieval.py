@@ -65,7 +65,7 @@ METHODS = {
         (lambda q: rag.rerank(q, P.RetrievalResult(*rag.dense_search(q, k=100)), top_n=TOP_N, use_images=True), SLOWEST),
     "bm25 only": (lambda q: P.RetrievalResult(*rag.bm25_search(q, k=100)), FAST),
     "improved: hybrid (dense + bm25, RRF)": (lambda q: rag.search(query_text=q, k=100), FAST),
-    "improved: hybrid, bm25 weight 0.5": (lambda q: rag.search(query_text=q, k=100, bm25_weight=0.5), FAST),
+    "improved: hybrid (bm25 weight 0.5)": (lambda q: rag.search(query_text=q, k=100, bm25_weight=0.5), FAST),
     "improved: hybrid + rerank (text)":
         (lambda q: rag.rerank(q, rag.search(query_text=q, k=100), top_n=TOP_N, use_images=False), SLOW),
 }
