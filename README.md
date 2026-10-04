@@ -14,6 +14,35 @@ Recipe search over [`mrdbourke/recipe-synthetic-images-10k`](https://huggingface
 |---|---|
 | `main` | The original tutorial pipeline, fixed so it runs top to bottom on a Google Colab L4 (24GB). |
 | `improved` | Hybrid retrieval, image-query rewriting, batched reranking, Qwen3.5-4B grounded answers and a retrieval evaluation. |
+| `exp-multilingual-embed` | Experiment: Qwen3-VL-Embedding-2B + Qwen3-VL-Reranker-2B (multimodal, multilingual) instead of Nemotron VL. |
+| `exp-agentic` | Experiment: Qwen3.5-4B tool-calling agent that plans/translates searches (optional thinking). |
+
+See [`REPORT.md`](REPORT.md) for the head-to-head evaluation of all pipelines.
+
+## Improved pipeline (`improved`)
+
+| Stage | Baseline (`main`) | Improved |
+|---|---|---|
+| Retrieval | Dense only (Nemotron Embed VL) | **Hybrid**: dense + BM25, fused with Reciprocal Rank Fusion |
+| Query types | Text *or* image (text silently wins if both) | Text, image, or **both combined** |
+| Image queries | Dense only, can't be reranked | **Rewritten to text** by the VLM so they can use BM25 + reranking |
+| Reranking | Image + text pairs, batched | Batched, returns scores, fast **text-only** mode (no reviews) |
+| Generation | Qwen3-VL-2B, generic summary | **Qwen3.5-4B**, answers the query grounded in the results with citations |
+| Evaluation | – | Recall@k / MRR on 200 recipes × {title, paraphrase, Spanish, Bengali, Chinese} queries |
+
+Code: [`mmrag/pipeline.py`](mmrag/pipeline.py) · notebook: [`notebooks/multimodal_rag_improved.ipynb`](notebooks/multimodal_rag_improved.ipynb)
+(executed L4 run in [`results/executed_improved.ipynb`](results/executed_improved.ipynb)) · standalone:
+[`standalone/app.py`](standalone/app.py).
+
+```bash
+pip install -r requirements-improved.txt
+python standalone/app.py                                                   # Gradio demo on http://0.0.0.0:7860
+python standalone/app.py --query "quick vegetarian dinner with spinach" --answer
+python standalone/app.py --image photo.jpg --query "vegetarian"            # combined image + text query
+python scripts/eval_retrieval.py                                           # retrieval evaluation
+```
+
+All models together use ~16GB of GPU memory (fits a 24GB L4 / RTX A5000).
 
 ## Fixes to the original notebook (`main`)
 

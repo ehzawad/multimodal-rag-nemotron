@@ -27,6 +27,7 @@ parser.add_argument("--num-queries", type=int, default=200)
 parser.add_argument("--num-rerank-queries", type=int, default=50)
 parser.add_argument("--num-slowest-queries", type=int, default=25, help="for image+text reranking (~17s per query)")
 parser.add_argument("--rerank-top-n", type=int, default=20)
+parser.add_argument("--embeddings", default=None, help="document embeddings file (default: see load_document_embeddings)")
 parser.add_argument("--output-name", default="eval_results")
 parser.add_argument("--output-dir", default=os.environ.get("COLAB_OUTPUT_DIR", str(REPO_DIR / "results")))
 args = parser.parse_args()
@@ -40,14 +41,14 @@ from datasets import load_dataset  # noqa: E402
 
 print("[INFO] Loading dataset, embeddings and models...")
 dataset = load_dataset(P.DATASET_PATH, split="train")
-document_embeddings = P.load_document_embeddings(device="cuda")
+document_embeddings = P.load_document_embeddings(args.embeddings, device="cuda")
 embed_model = P.load_embed_model()
 rerank_model, rerank_processor = P.load_rerank_model(modality="image_text")
 rag = P.MultimodalRAG(dataset, embed_model, document_embeddings, rerank_model, rerank_processor)
 print(f"[INFO] GPU memory after loading: {torch.cuda.memory_allocated() / 1e9:.1f} GB")
 
-# Sanity check: the precomputed document embeddings were made with an older revision of the embedding model's remote
-# code (same weights). Re-embed a few documents with the revision we load and compare.
+# Sanity check: re-embed a few documents with the loaded model and compare with the stored document embeddings
+# (should be ~1.0; the demo Space's file only matches MMRAG_NEMOTRON_REVISIONS=original).
 with torch.inference_mode():
     check_ids = [0, 42, 4242]
     check = dataset.select(check_ids)
@@ -64,6 +65,7 @@ METHODS = {
         (lambda q: rag.rerank(q, P.RetrievalResult(*rag.dense_search(q, k=100)), top_n=TOP_N, use_images=True), SLOWEST),
     "bm25 only": (lambda q: P.RetrievalResult(*rag.bm25_search(q, k=100)), FAST),
     "improved: hybrid (dense + bm25, RRF)": (lambda q: rag.search(query_text=q, k=100), FAST),
+    "improved: hybrid, bm25 weight 0.5": (lambda q: rag.search(query_text=q, k=100, bm25_weight=0.5), FAST),
     "improved: hybrid + rerank (text)":
         (lambda q: rag.rerank(q, rag.search(query_text=q, k=100), top_n=TOP_N, use_images=False), SLOW),
 }
