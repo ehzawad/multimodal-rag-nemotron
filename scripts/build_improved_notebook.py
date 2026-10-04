@@ -56,7 +56,15 @@ sys.path.insert(0, str(REPO_DIR))
 print(f"[INFO] Using pipeline code from: {REPO_DIR}")
 """)
 
-md("## Load dataset, embeddings and models")
+md("""
+## Load dataset, embeddings and models
+
+> **Embedding compatibility:** the demo Space's precomputed document embeddings only match the tutorial's pinned
+> Nemotron commit (`5b5ca69`), which needs transformers 4.57. Every official revision (needed for transformers 5 /
+> Qwen3.5) tokenizes and masks differently: re-embedding a document gives cosine ≈ 0.86 to its stored vector.
+> We therefore re-embed the corpus once with the official revision (`scripts/build_nemotron_embeddings.py`, ~2h on an
+> L4) and load that file. Without it, the pipeline falls back to the Space's file with a warning (lower accuracy).
+""")
 code("""
 %%time
 import time
