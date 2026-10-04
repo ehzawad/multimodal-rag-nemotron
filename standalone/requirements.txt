@@ -1,0 +1,11 @@
+# Standalone baseline (main branch). Tested on Python 3.13 + CUDA (Colab L4); any 24GB GPU (e.g. RTX A5000) works.
+torch>=2.5
+torchvision
+transformers==4.57.3
+accelerate>=1.12.0
+datasets>=4.4.2
+safetensors>=0.7.0
+huggingface_hub<1.0
+qwen-vl-utils==0.0.14
+gradio>=5
+Pillow

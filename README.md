@@ -40,4 +40,17 @@ Colab GPU from your terminal with [colab-persist](https://github.com/ehzawad/col
 colab-persist run scripts/run_notebook.py --source . --project mmrag -- notebooks/multimodal_rag_tutorial.ipynb
 ```
 
+### Standalone (your own GPU server, e.g. RTX A5000 24GB)
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r standalone/requirements.txt
+python standalone/baseline_app.py                                     # Gradio demo on http://0.0.0.0:7860
+python standalone/baseline_app.py --query "eggplant dip" --rerank      # single query in the terminal
+python standalone/baseline_app.py --query "best omelette recipes" --summary
+```
+
+The embeddings (41MB) and example image are downloaded from the original demo Space on first run
+(set `MMRAG_DATA_DIR` to choose where). Peak GPU memory is ~16GB with reranking.
+
 `scripts/build_baseline_notebook.py` regenerates the fixed notebook from the original tutorial notebook.
