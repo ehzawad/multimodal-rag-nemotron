@@ -11,3 +11,4 @@ bm25s>=0.2.10
 flash-linear-attention  # fast Qwen3.5 linear-attention kernels (optional, pure Triton)
 gradio>=5
 Pillow
+sentence-transformers>=5.4  # exp-multilingual-embed: Qwen3-VL-Embedding / Reranker
