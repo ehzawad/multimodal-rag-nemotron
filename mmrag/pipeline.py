@@ -26,10 +26,15 @@ from PIL import Image
 
 # Same weights as the baseline's pinned commits (identical safetensors hashes), newer remote code that supports
 # transformers 5.x, which Qwen3.5 requires.
+# Set MMRAG_NEMOTRON_REVISIONS=original to use the baseline's pinned commits (needs transformers 4.57.x).
 EMBED_MODEL_PATH = "nvidia/llama-nemotron-embed-vl-1b-v2"
-EMBED_REVISION = "582e3bf72aee355e3c59ed89de53543c5b0657ee"
 RERANK_MODEL_PATH = "nvidia/llama-nemotron-rerank-vl-1b-v2"
-RERANK_REVISION = "b8a9987b05b75db5ad949c825cbcbf6eb7c48b5a"
+if os.environ.get("MMRAG_NEMOTRON_REVISIONS") == "original":
+    EMBED_REVISION = "5b5ca69c35bf6ec1484d2d5ff238626e67a745e2"
+    RERANK_REVISION = "47e5a355d1a050c3e5f69d53f14964b1d34bcd9d"
+else:
+    EMBED_REVISION = "582e3bf72aee355e3c59ed89de53543c5b0657ee"
+    RERANK_REVISION = "b8a9987b05b75db5ad949c825cbcbf6eb7c48b5a"
 GENERATION_MODEL_ID = "Qwen/Qwen3.5-4B"
 GENERATION_REVISION = "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
 
@@ -88,13 +93,44 @@ def load_generation_model(device_map="auto"):
     return model, processor
 
 
-def load_document_embeddings(path=EMBEDDING_FILE, device="cuda"):
-    """Load the precomputed image + text embeddings (downloading them from the demo Space if needed),
-    L2-normalised once so retrieval is a single matmul."""
+# The demo Space's precomputed embeddings only match the tutorial's pinned embed commit (5b5ca69, transformers 4.57):
+# every official revision tokenizes/masks differently (cosine ~0.86 to the stored vectors). With the official revision
+# we load here, the corpus is re-embedded once with scripts/build_nemotron_embeddings.py and loaded from this file.
+REEMBEDDED_FILE = "nemotron_embed_vl_582e3bf_image_text_10k.safetensors"
+
+
+def build_document_embeddings(dataset, embed_model, batch_size=8, text_column="recipe_markdown", image_column="image",
+                              path=REEMBEDDED_FILE):
+    """Embed every recipe (image + full markdown text, same as the tutorial) with the loaded embedding model."""
+    from safetensors.torch import save_file
+    from tqdm.auto import tqdm
+
+    chunks = []
+    for i in tqdm(range(0, len(dataset), batch_size), desc="Embedding recipes (Nemotron)"):
+        batch = dataset.select(range(i, min(i + batch_size, len(dataset))))
+        with torch.inference_mode():
+            chunks.append(embed_model.encode_documents(images=batch[image_column], texts=batch[text_column])
+                          .to(torch.bfloat16).cpu())
+    embeddings = torch.cat(chunks)
+    save_file({"image_text_embeddings": embeddings.contiguous()}, path)
+    return embeddings
+
+
+def load_document_embeddings(path=None, device="cuda"):
+    """Load image + text document embeddings, L2-normalised once so retrieval is a single matmul.
+
+    Default: the re-embedded corpus if present (matches the official revision), else the demo Space's file
+    (only matches MMRAG_NEMOTRON_REVISIONS=original)."""
     from huggingface_hub import hf_hub_download
     from safetensors.torch import load_file
 
+    if path is None:
+        original = os.environ.get("MMRAG_NEMOTRON_REVISIONS") == "original"
+        path = EMBEDDING_FILE if original else os.environ.get("MMRAG_EMBEDDINGS", REEMBEDDED_FILE)
     if not os.path.exists(path):
+        if path != EMBEDDING_FILE:
+            raise FileNotFoundError(f"{path} not found: run scripts/build_nemotron_embeddings.py first "
+                                    f"(or set MMRAG_NEMOTRON_REVISIONS=original with transformers 4.57.x)")
         path = hf_hub_download(repo_id=SPACE_REPO, repo_type="space", filename=EMBEDDING_FILE)
     embeddings = load_file(path)["image_text_embeddings"].to(device=device, dtype=torch.float32)
     return torch.nn.functional.normalize(embeddings, dim=-1)
@@ -200,18 +236,20 @@ class MultimodalRAG:
     # --- hybrid ----------------------------------------------------------------------------------------------
     def search(self, query_text: str | None = None, query_image: Image.Image | None = None, k: int = 20,
                candidates: int = 100, use_bm25: bool = True, rewrite_image_query: bool = True,
-               rrf_k: int = 60) -> RetrievalResult:
+               rrf_k: int = 60, bm25_weight: float = 1.0) -> RetrievalResult:
         query_text = query_text.strip() if query_text and query_text.strip() else None
         if query_text is None and query_image is None:
             raise ValueError("Please provide a text query, an image query or both.")
         timings = {}
 
         start = time.time()
-        rankings = []
+        rankings, weights = [], []
         if query_text is not None:
             rankings.append(self.dense_search(query_text, k=candidates)[0])
+            weights.append(1.0)
         if query_image is not None:
             rankings.append(self.dense_search(query_image, k=candidates)[0])
+            weights.append(1.0)
         timings["dense_s"] = round(time.time() - start, 3)
 
         lexical_query = query_text
@@ -225,9 +263,10 @@ class MultimodalRAG:
             bm25_ranking = self.bm25_search(lexical_query, k=candidates)[0]
             if bm25_ranking:
                 rankings.append(bm25_ranking)
+                weights.append(bm25_weight)
             timings["bm25_s"] = round(time.time() - start, 3)
 
-        fused = reciprocal_rank_fusion(rankings, k=rrf_k)[:k]
+        fused = reciprocal_rank_fusion(rankings, k=rrf_k, weights=weights)[:k]
         return RetrievalResult(indices=[doc_id for doc_id, _ in fused], scores=[score for _, score in fused],
                                query_text=lexical_query, timings=timings)
 
