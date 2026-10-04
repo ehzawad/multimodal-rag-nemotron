@@ -1,0 +1,162 @@
+{
+ "title | qwen3-vl: dense": {
+  "n": 200,
+  "recall@1": 0.96,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.9791666666666667,
+  "mean_latency_s": 0.04690974354743958
+ },
+ "title | qwen3-vl: hybrid (dense + bm25, RRF)": {
+  "n": 200,
+  "recall@1": 0.935,
+  "recall@5": 0.985,
+  "recall@10": 0.995,
+  "mrr@10": 0.9593452380952381,
+  "mean_latency_s": 0.04773529171943665
+ },
+ "title | qwen3-vl: hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.98,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.99,
+  "mean_latency_s": 0.9354788494110108
+ },
+ "title | qwen3-vl: hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 1.0,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 1.0,
+  "mean_latency_s": 2.7079774475097658
+ },
+ "paraphrase | qwen3-vl: dense": {
+  "n": 200,
+  "recall@1": 0.77,
+  "recall@5": 0.97,
+  "recall@10": 0.98,
+  "mrr@10": 0.8505555555555556,
+  "mean_latency_s": 0.04755216479301452
+ },
+ "paraphrase | qwen3-vl: hybrid (dense + bm25, RRF)": {
+  "n": 200,
+  "recall@1": 0.795,
+  "recall@5": 0.94,
+  "recall@10": 0.98,
+  "mrr@10": 0.8638948412698413,
+  "mean_latency_s": 0.04792837500572204
+ },
+ "paraphrase | qwen3-vl: hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.86,
+  "recall@5": 0.96,
+  "recall@10": 0.96,
+  "mrr@10": 0.9033333333333333,
+  "mean_latency_s": 0.9351330137252808
+ },
+ "paraphrase | qwen3-vl: hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.92,
+  "recall@5": 0.96,
+  "recall@10": 0.96,
+  "mrr@10": 0.94,
+  "mean_latency_s": 2.722281551361084
+ },
+ "es | qwen3-vl: dense": {
+  "n": 200,
+  "recall@1": 0.415,
+  "recall@5": 0.705,
+  "recall@10": 0.775,
+  "mrr@10": 0.5329404761904761,
+  "mean_latency_s": 0.04747029542922974
+ },
+ "es | qwen3-vl: hybrid (dense + bm25, RRF)": {
+  "n": 200,
+  "recall@1": 0.15,
+  "recall@5": 0.415,
+  "recall@10": 0.625,
+  "mrr@10": 0.2692480158730159,
+  "mean_latency_s": 0.0481280779838562
+ },
+ "es | qwen3-vl: hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.6,
+  "recall@5": 0.74,
+  "recall@10": 0.74,
+  "mrr@10": 0.6486666666666666,
+  "mean_latency_s": 0.9690200090408325
+ },
+ "es | qwen3-vl: hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.56,
+  "recall@5": 0.64,
+  "recall@10": 0.72,
+  "mrr@10": 0.6114285714285714,
+  "mean_latency_s": 2.7087534618377687
+ },
+ "bn | qwen3-vl: dense": {
+  "n": 200,
+  "recall@1": 0.335,
+  "recall@5": 0.575,
+  "recall@10": 0.67,
+  "mrr@10": 0.4399126984126984,
+  "mean_latency_s": 0.047302465438842776
+ },
+ "bn | qwen3-vl: hybrid (dense + bm25, RRF)": {
+  "n": 200,
+  "recall@1": 0.335,
+  "recall@5": 0.575,
+  "recall@10": 0.67,
+  "mrr@10": 0.4399126984126984,
+  "mean_latency_s": 0.0478106415271759
+ },
+ "bn | qwen3-vl: hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.5,
+  "recall@5": 0.7,
+  "recall@10": 0.7,
+  "mrr@10": 0.5720000000000001,
+  "mean_latency_s": 1.0600206089019775
+ },
+ "bn | qwen3-vl: hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.36,
+  "recall@5": 0.68,
+  "recall@10": 0.76,
+  "mrr@10": 0.487047619047619,
+  "mean_latency_s": 2.8248048400878907
+ },
+ "zh | qwen3-vl: dense": {
+  "n": 200,
+  "recall@1": 0.47,
+  "recall@5": 0.745,
+  "recall@10": 0.835,
+  "mrr@10": 0.5873650793650793,
+  "mean_latency_s": 0.04726338624954224
+ },
+ "zh | qwen3-vl: hybrid (dense + bm25, RRF)": {
+  "n": 200,
+  "recall@1": 0.465,
+  "recall@5": 0.745,
+  "recall@10": 0.84,
+  "mrr@10": 0.582670634920635,
+  "mean_latency_s": 0.047683428525924686
+ },
+ "zh | qwen3-vl: hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.66,
+  "recall@5": 0.88,
+  "recall@10": 0.9,
+  "mrr@10": 0.7502222222222222,
+  "mean_latency_s": 0.9586651134490967
+ },
+ "zh | qwen3-vl: hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.48,
+  "recall@5": 0.72,
+  "recall@10": 0.88,
+  "mrr@10": 0.6130476190476191,
+  "mean_latency_s": 2.702751579284668
+ }
+}

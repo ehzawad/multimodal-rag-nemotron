@@ -1,0 +1,122 @@
+{
+ "title | agentic: tool-call rewrite + hybrid": {
+  "n": 50,
+  "recall@1": 0.78,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.8640000000000001,
+  "mean_latency_s": 4.365320448875427
+ },
+ "title | agentic: tool-call rewrite + hybrid + rerank (text)": {
+  "n": 50,
+  "recall@1": 0.94,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.9666666666666667,
+  "mean_latency_s": 4.905503630638123
+ },
+ "title | agentic (thinking): rewrite + hybrid + rerank (text)": {
+  "n": 25,
+  "recall@1": 0.92,
+  "recall@5": 0.96,
+  "recall@10": 1.0,
+  "mrr@10": 0.9383333333333332,
+  "mean_latency_s": 14.151642732620239
+ },
+ "paraphrase | agentic: tool-call rewrite + hybrid": {
+  "n": 50,
+  "recall@1": 0.54,
+  "recall@5": 0.8,
+  "recall@10": 0.88,
+  "mrr@10": 0.6457142857142857,
+  "mean_latency_s": 4.892810659408569
+ },
+ "paraphrase | agentic: tool-call rewrite + hybrid + rerank (text)": {
+  "n": 50,
+  "recall@1": 0.78,
+  "recall@5": 0.94,
+  "recall@10": 0.94,
+  "mrr@10": 0.8506666666666667,
+  "mean_latency_s": 5.409430899620056
+ },
+ "paraphrase | agentic (thinking): rewrite + hybrid + rerank (text)": {
+  "n": 25,
+  "recall@1": 0.76,
+  "recall@5": 0.92,
+  "recall@10": 0.96,
+  "mrr@10": 0.8390476190476189,
+  "mean_latency_s": 14.772849769592286
+ },
+ "es | agentic: tool-call rewrite + hybrid": {
+  "n": 50,
+  "recall@1": 0.28,
+  "recall@5": 0.58,
+  "recall@10": 0.72,
+  "mrr@10": 0.4161904761904762,
+  "mean_latency_s": 4.463501944541931
+ },
+ "es | agentic: tool-call rewrite + hybrid + rerank (text)": {
+  "n": 50,
+  "recall@1": 0.54,
+  "recall@5": 0.72,
+  "recall@10": 0.78,
+  "mrr@10": 0.63,
+  "mean_latency_s": 5.026714954376221
+ },
+ "es | agentic (thinking): rewrite + hybrid + rerank (text)": {
+  "n": 25,
+  "recall@1": 0.52,
+  "recall@5": 0.72,
+  "recall@10": 0.72,
+  "mrr@10": 0.6,
+  "mean_latency_s": 16.135742263793944
+ },
+ "bn | agentic: tool-call rewrite + hybrid": {
+  "n": 50,
+  "recall@1": 0.4,
+  "recall@5": 0.6,
+  "recall@10": 0.66,
+  "mrr@10": 0.461,
+  "mean_latency_s": 4.537970790863037
+ },
+ "bn | agentic: tool-call rewrite + hybrid + rerank (text)": {
+  "n": 50,
+  "recall@1": 0.44,
+  "recall@5": 0.68,
+  "recall@10": 0.7,
+  "mrr@10": 0.521,
+  "mean_latency_s": 5.116788892745972
+ },
+ "bn | agentic (thinking): rewrite + hybrid + rerank (text)": {
+  "n": 25,
+  "recall@1": 0.44,
+  "recall@5": 0.72,
+  "recall@10": 0.76,
+  "mrr@10": 0.545,
+  "mean_latency_s": 17.365065898895264
+ },
+ "zh | agentic: tool-call rewrite + hybrid": {
+  "n": 50,
+  "recall@1": 0.32,
+  "recall@5": 0.64,
+  "recall@10": 0.74,
+  "mrr@10": 0.43955555555555553,
+  "mean_latency_s": 5.2732395792007445
+ },
+ "zh | agentic: tool-call rewrite + hybrid + rerank (text)": {
+  "n": 50,
+  "recall@1": 0.48,
+  "recall@5": 0.8,
+  "recall@10": 0.82,
+  "mrr@10": 0.6108571428571429,
+  "mean_latency_s": 5.854430265426636
+ },
+ "zh | agentic (thinking): rewrite + hybrid + rerank (text)": {
+  "n": 25,
+  "recall@1": 0.48,
+  "recall@5": 0.72,
+  "recall@10": 0.76,
+  "mrr@10": 0.584,
+  "mean_latency_s": 19.527491750717164
+ }
+}

@@ -100,10 +100,16 @@ def accuracy_vs_latency(filename):
         if None in r1 or None in lat:
             continue
         points.append((label, sum(lat) / len(lat) * 1000, sum(r1) / len(r1)))
+    # Hand-placed offsets for points that sit close together
+    offsets = {"Qwen3-VL dense": (6, 6), "Qwen3-VL gated hybrid": (6, -11), "Nemotron hybrid": (-8, 6),
+               "Nemotron dense (baseline)": (6, -11), "Nemotron gated hybrid": (6, 4)}
     for label, x, y in points:
         ax.scatter([x], [y], s=64, color=SERIES[0], edgecolor=SURFACE, linewidth=2, zorder=3)
-        ax.annotate(label, (x, y), xytext=(6, 4), textcoords="offset points", fontsize=7.5, color=TEXT)
+        dx, dy = offsets.get(label, (6, 4))
+        ax.annotate(label, (x, y), xytext=(dx, dy), textcoords="offset points", fontsize=7.5, color=TEXT,
+                    ha="right" if dx < 0 else "left")
     ax.set_xscale("log")
+    ax.set_xlim(left=6)  # room for the left-placed labels
     ax.set_xlabel("Mean latency per query (ms, log scale)", color=TEXT_2)
     ax.set_ylabel("Mean Recall@1 over 5 query sets", color=TEXT_2)
     ax.set_title("Accuracy vs. latency (higher and further left is better)", loc="left", color=TEXT, fontsize=11,
