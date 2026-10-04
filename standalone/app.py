@@ -5,7 +5,11 @@
     python standalone/app.py --image photo.jpg --query "vegetarian"     # combined image + text query
     python standalone/app.py --query "egg sandwich" --no-rerank --top-k 5
 
-Pipeline: Nemotron Embed VL dense search + BM25 (RRF fusion) -> Nemotron Rerank VL -> Qwen3.5-4B grounded answer.
+Pipeline: dense search + BM25 (RRF fusion) -> cross-encoder rerank -> Qwen3.5-4B grounded answer.
+Backends (--backend): qwen-vl = Qwen3-VL-Embedding-2B + Qwen3-VL-Reranker-2B (multilingual, default on this branch),
+nemotron = Nemotron Embed/Rerank VL.
+
+    python standalone/app.py --query "টক দই দিয়ে কলার রুটি" --answer       # multilingual query
 """
 import argparse
 import sys
@@ -22,6 +26,8 @@ parser.add_argument("--no-rerank", action="store_true", help="skip the cross-enc
 parser.add_argument("--rerank-images", action="store_true",
                     help="rerank on recipe image + text (slower) instead of recipe text only")
 parser.add_argument("--answer", action="store_true", help="generate a grounded answer with Qwen3.5-4B")
+parser.add_argument("--backend", choices=["qwen-vl", "nemotron"], default="qwen-vl")
+parser.add_argument("--qwen-embeddings", default=None, help="Qwen3-VL corpus embeddings (scripts/build_qwen_vl_embeddings.py)")
 parser.add_argument("--host", default="0.0.0.0")
 parser.add_argument("--port", type=int, default=7860)
 parser.add_argument("--share", action="store_true", help="create a public gradio.live link")
@@ -31,16 +37,20 @@ import torch  # noqa: E402
 from datasets import load_dataset  # noqa: E402
 from PIL import Image  # noqa: E402
 
-from mmrag import pipeline as P  # noqa: E402
+from mmrag import pipeline as P, qwen_vl_retrieval as Q  # noqa: E402
 
 print("[INFO] Loading dataset, embeddings and models...")
 start = time.time()
 dataset = load_dataset(P.DATASET_PATH, split="train")
-rag = P.MultimodalRAG(dataset,
-                      P.load_embed_model(),
-                      P.load_document_embeddings(device="cuda" if torch.cuda.is_available() else "cpu"),
-                      *P.load_rerank_model(modality="image_text"),
-                      *P.load_generation_model())
+if args.backend == "qwen-vl":
+    rag = Q.QwenVLRAG(dataset, Q.load_embed_model(), Q.load_document_embeddings(args.qwen_embeddings or Q.EMBEDDING_FILE),
+                      Q.load_rerank_model(), None, *P.load_generation_model())
+else:
+    rag = P.MultimodalRAG(dataset,
+                          P.load_embed_model(),
+                          P.load_document_embeddings(device="cuda" if torch.cuda.is_available() else "cpu"),
+                          *P.load_rerank_model(modality="image_text"),
+                          *P.load_generation_model())
 print(f"[INFO] Ready in {time.time() - start:.0f}s | GPU memory: {torch.cuda.memory_allocated() / 1e9:.1f} GB")
 
 
