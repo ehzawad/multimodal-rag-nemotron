@@ -1,4 +1,4 @@
-# Standalone baseline (main branch). Tested on Python 3.13 + CUDA (Colab L4); any 24GB GPU (e.g. RTX A5000) works.
+# Baseline (notebooks/multimodal_rag_tutorial_baseline.ipynb, standalone/baseline_app.py): the original tutorial stack.
 torch>=2.5
 torchvision
 transformers==4.57.3

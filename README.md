@@ -1,56 +1,51 @@
-# Multimodal RAG with NVIDIA Nemotron VL
+# Multilingual multimodal recipe RAG
 
-Recipe search over [`mrdbourke/recipe-synthetic-images-10k`](https://huggingface.co/datasets/mrdbourke/recipe-synthetic-images-10k)
-(10,096 recipe images + markdown texts) with text or image queries, based on the
-[Learn Hugging Face multimodal RAG tutorial](https://www.learnhuggingface.com/notebooks/hugging_face_multimodal_rag_tutorial).
+Search 10,096 recipes ([`mrdbourke/recipe-synthetic-images-10k`](https://huggingface.co/datasets/mrdbourke/recipe-synthetic-images-10k):
+recipe-card image + markdown text each) with a **text query in 30+ languages, an image, or both**, and get an answer grounded in the
+retrieved recipes. Runs on one 24GB GPU (Colab L4, RTX A5000). Full evaluation: **[`reports/report.pdf`](reports/report.pdf)**.
 
-* **Embedding:** [`nvidia/llama-nemotron-embed-vl-1b-v2`](https://huggingface.co/nvidia/llama-nemotron-embed-vl-1b-v2) (image + text document embeddings)
-* **Rerank:** [`nvidia/llama-nemotron-rerank-vl-1b-v2`](https://huggingface.co/nvidia/llama-nemotron-rerank-vl-1b-v2)
-* **Generation:** [`Qwen/Qwen3-VL-2B-Instruct`](https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct)
-
-## Branches
-
-| Branch | Contents |
-|---|---|
-| `main` | The original tutorial pipeline, fixed so it runs top to bottom on a Google Colab L4 (24GB). |
-| `improved` | Hybrid retrieval, image-query rewriting, batched reranking, Qwen3.5-4B grounded answers and a retrieval evaluation. |
-
-## Fixes to the original notebook (`main`)
-
-| Problem | Fix |
-|---|---|
-| `ValueError: Sample larger than population` – image paths were read from a local folder that only existed on the author's machine (0 images found). | Sample from the dataset's `image` column. |
-| Rerank of 20 image + text pairs in one forward pass → CUDA OOM on a 24GB L4. | Batched reranking (`RERANK_BATCH_SIZE = 4`) in the notebook, `rerank_samples()` and `demo/app.py`. |
-| Rerank processor kwargs (`rerank_max_length`, tiles) were built under a misspelled name and never passed. | Pass them to `AutoProcessor.from_pretrained`. |
-| Rerank with an image query passed a PIL image as the reranker's text `question`. | Skip reranking for image queries (as the demo UI says). |
-| `get_top_n_scores_and_samples` ignored `top_n` (`top_n == len(scores)` no-op, `[:3]` hardcoded). | Use `top_n`. |
-| Embeddings had to be created from scratch (slow) unless the file was present locally; batch indices hardcoded to `i+8`. | Download the precomputed embeddings from the demo Space; respect `IMAGE_TEXT_BATCH_SIZE`. |
-| Test image `moussaka.jpeg` not distributed. | Fall back to the demo's `kitchen_bench.png`. |
-| "Run all" blocks on `demo.launch(debug=True)` and would try to publish a Space. | `HEADLESS=1` skips the launch; upload guarded by `UPLOAD_TO_HF = False`. |
-| No dependency install cell. | Pinned install cell (`transformers==4.57.3`, which the pinned Nemotron commits were built against). |
-
-The executed notebook from a Colab L4 run is in [`results/executed_baseline.ipynb`](results/executed_baseline.ipynb) (138 s end to end, no errors).
-
-## Run
-
-Open [`notebooks/multimodal_rag_tutorial.ipynb`](notebooks/multimodal_rag_tutorial.ipynb) in Colab with an L4 GPU, or run it headless on a
-Colab GPU from your terminal with [colab-persist](https://github.com/ehzawad/colab-persist):
-
-```bash
-colab-persist run scripts/run_notebook.py --source . --project mmrag -- notebooks/multimodal_rag_tutorial.ipynb
+```
+query (text / image) ─► Qwen3-VL-Embedding-2B dense search ─┐
+                    └─► BM25 (only if query words are in the corpus vocabulary) ─┴─► RRF ─► Qwen3-VL-Reranker-2B ─► Qwen3.5-4B answer
 ```
 
-### Standalone (your own GPU server, e.g. RTX A5000 24GB)
+| Pipeline | Avg Recall@1 (title, paraphrase, es, bn, zh) | Non-English Recall@1 | Latency / query |
+|---|---|---|---|
+| Original tutorial (Nemotron VL, image + text rerank) | 0.400 | 0.13 | ~15 s |
+| **This repo (default)** | **0.748** | **0.63** | **~1 s** |
+
+Started from the [Learn Hugging Face multimodal RAG tutorial](https://www.learnhuggingface.com/notebooks/hugging_face_multimodal_rag_tutorial)
+(Nemotron Embed/Rerank VL + Qwen3-VL-2B); the fixed original is kept as a reference baseline.
+
+## Quick start
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r standalone/requirements.txt
-python standalone/baseline_app.py                                     # Gradio demo on http://0.0.0.0:7860
-python standalone/baseline_app.py --query "eggplant dip" --rerank      # single query in the terminal
-python standalone/baseline_app.py --query "best omelette recipes" --summary
+pip install -r requirements.txt
+python standalone/app.py                                             # Gradio demo on http://0.0.0.0:7860
+python standalone/app.py --query "酸奶油香蕉面包" --answer              # one query, any language
+python standalone/app.py --image photo.jpg --query "vegetarian"      # image + text
 ```
 
-The embeddings (41MB) and example image are downloaded from the original demo Space on first run
-(set `MMRAG_DATA_DIR` to choose where). Peak GPU memory is ~16GB with reranking.
+The corpus is embedded once on first run (~50 min on an L4, 41MB file). Options: `--rerank-images` (most accurate for English,
+~3× slower), `--agent` (Qwen3.5-4B plans the searches with tool calls), `--backend nemotron`.
+Notebook: [`notebooks/multimodal_rag.ipynb`](notebooks/multimodal_rag.ipynb) (Colab, L4).
 
-`scripts/build_baseline_notebook.py` regenerates the fixed notebook from the original tutorial notebook.
+## Repository
+
+| Path | What |
+|---|---|
+| `mmrag/` | pipeline (`pipeline.py` hybrid retrieval, rerank, generation; `qwen_vl_retrieval.py`; `agent.py`; `evaluation.py`) |
+| `standalone/app.py`, `notebooks/multimodal_rag.ipynb` | the final pipeline as CLI/Gradio app and notebook |
+| `notebooks/multimodal_rag_tutorial_baseline.ipynb`, `standalone/baseline_app.py` | original tutorial, fixed (`requirements-baseline.txt`) |
+| `scripts/` | corpus embedding, evaluation (`eval_*.py`, `make_eval_queries.py`), report, headless notebook runner |
+| `results/` | evaluation queries and results (JSON/markdown), executed notebooks |
+| `reports/` | `report.pdf` / `report.html` and figures |
+
+## Key findings
+
+* The original notebook crashed (`ValueError: Sample larger than population`, local image folder) and its image + text rerank
+  ran out of memory on 24GB; both fixed, plus three latent bugs.
+* The tutorial's precomputed embeddings only match its pinned Nemotron commit; official revisions need a re-embedded corpus
+  (which also improved dense retrieval).
+* Multilingual embedding (Qwen3-VL) is the biggest lever; BM25 helps English but hurts other languages unless gated;
+  agentic query planning helps weak retrievers but costs ~5 s and doesn't beat the default.

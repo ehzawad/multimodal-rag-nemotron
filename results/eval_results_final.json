@@ -1,0 +1,162 @@
+{
+ "title | final: qwen3-vl gated hybrid": {
+  "n": 200,
+  "recall@1": 0.935,
+  "recall@5": 0.985,
+  "recall@10": 0.995,
+  "mrr@10": 0.9593452380952381,
+  "mean_latency_s": 0.04818183422088623
+ },
+ "title | final: qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.98,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.99,
+  "mean_latency_s": 0.9317344236373901
+ },
+ "title | final: qwen3-vl gated hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 1.0,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 1.0,
+  "mean_latency_s": 2.7075043392181395
+ },
+ "title | final: agent + qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.94,
+  "recall@5": 1.0,
+  "recall@10": 1.0,
+  "mrr@10": 0.965,
+  "mean_latency_s": 5.307139563560486
+ },
+ "paraphrase | final: qwen3-vl gated hybrid": {
+  "n": 200,
+  "recall@1": 0.795,
+  "recall@5": 0.94,
+  "recall@10": 0.98,
+  "mrr@10": 0.8638948412698413,
+  "mean_latency_s": 0.04900285840034485
+ },
+ "paraphrase | final: qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.86,
+  "recall@5": 0.96,
+  "recall@10": 0.96,
+  "mrr@10": 0.9033333333333333,
+  "mean_latency_s": 0.9349683237075805
+ },
+ "paraphrase | final: qwen3-vl gated hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.92,
+  "recall@5": 0.96,
+  "recall@10": 0.96,
+  "mrr@10": 0.94,
+  "mean_latency_s": 2.732107152938843
+ },
+ "paraphrase | final: agent + qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.8,
+  "recall@5": 0.96,
+  "recall@10": 0.98,
+  "mrr@10": 0.8716666666666667,
+  "mean_latency_s": 5.795947976112366
+ },
+ "es | final: qwen3-vl gated hybrid": {
+  "n": 200,
+  "recall@1": 0.39,
+  "recall@5": 0.675,
+  "recall@10": 0.735,
+  "mrr@10": 0.5005595238095238,
+  "mean_latency_s": 0.048261779546737674
+ },
+ "es | final: qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.72,
+  "recall@5": 0.82,
+  "recall@10": 0.84,
+  "mrr@10": 0.7585238095238096,
+  "mean_latency_s": 0.9751124334335327
+ },
+ "es | final: qwen3-vl gated hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.52,
+  "recall@5": 0.68,
+  "recall@10": 0.84,
+  "mrr@10": 0.6197142857142857,
+  "mean_latency_s": 2.7655727672576904
+ },
+ "es | final: agent + qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.6,
+  "recall@5": 0.8,
+  "recall@10": 0.88,
+  "mrr@10": 0.6873333333333334,
+  "mean_latency_s": 5.4102973365783695
+ },
+ "bn | final: qwen3-vl gated hybrid": {
+  "n": 200,
+  "recall@1": 0.335,
+  "recall@5": 0.575,
+  "recall@10": 0.67,
+  "mrr@10": 0.4399126984126984,
+  "mean_latency_s": 0.048837252855300904
+ },
+ "bn | final: qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.5,
+  "recall@5": 0.7,
+  "recall@10": 0.7,
+  "mrr@10": 0.5720000000000001,
+  "mean_latency_s": 1.0572904825210572
+ },
+ "bn | final: qwen3-vl gated hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.36,
+  "recall@5": 0.68,
+  "recall@10": 0.76,
+  "mrr@10": 0.487047619047619,
+  "mean_latency_s": 2.8733889770507814
+ },
+ "bn | final: agent + qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.48,
+  "recall@5": 0.72,
+  "recall@10": 0.78,
+  "mrr@10": 0.5721666666666667,
+  "mean_latency_s": 5.476877398490906
+ },
+ "zh | final: qwen3-vl gated hybrid": {
+  "n": 200,
+  "recall@1": 0.47,
+  "recall@5": 0.745,
+  "recall@10": 0.835,
+  "mrr@10": 0.5873650793650793,
+  "mean_latency_s": 0.0486204731464386
+ },
+ "zh | final: qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.68,
+  "recall@5": 0.9,
+  "recall@10": 0.92,
+  "mrr@10": 0.7702222222222223,
+  "mean_latency_s": 0.9578014659881592
+ },
+ "zh | final: qwen3-vl gated hybrid + qwen3-vl rerank (image+text)": {
+  "n": 25,
+  "recall@1": 0.56,
+  "recall@5": 0.76,
+  "recall@10": 0.92,
+  "mrr@10": 0.673047619047619,
+  "mean_latency_s": 2.7382246017456056
+ },
+ "zh | final: agent + qwen3-vl gated hybrid + qwen3-vl rerank (text)": {
+  "n": 50,
+  "recall@1": 0.52,
+  "recall@5": 0.82,
+  "recall@10": 0.86,
+  "mrr@10": 0.6465238095238095,
+  "mean_latency_s": 6.197119145393372
+ }
+}
