@@ -8,7 +8,6 @@ Usage (GPU):
     python scripts/eval_retrieval.py --num-rerank-queries 50  # rerank methods are slow, evaluate them on a prefix
 """
 import argparse
-import json
 import os
 import sys
 import time
@@ -18,10 +17,10 @@ import torch
 
 REPO_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_DIR))
-from mmrag import pipeline as P  # noqa: E402
+from mmrag import evaluation as E, pipeline as P  # noqa: E402
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--queries", default=str(REPO_DIR / "results" / "eval_queries.json"))
+parser.add_argument("--queries", default=str(E.QUERIES_FILE))
 parser.add_argument("--query-sets", default="title,paraphrase,es,bn,zh")
 parser.add_argument("--methods", default=None, help="comma separated subset of method names (default: all)")
 parser.add_argument("--num-queries", type=int, default=200)
@@ -32,7 +31,7 @@ parser.add_argument("--output-name", default="eval_results")
 parser.add_argument("--output-dir", default=os.environ.get("COLAB_OUTPUT_DIR", str(REPO_DIR / "results")))
 args = parser.parse_args()
 
-queries = json.loads(Path(args.queries).read_text())[:args.num_queries]
+queries = E.load_queries(args.queries, args.num_queries)
 query_sets = args.query_sets.split(",")
 output_dir = Path(args.output_dir)
 output_dir.mkdir(parents=True, exist_ok=True)
@@ -72,40 +71,6 @@ if args.methods:
     METHODS = {name: METHODS[name] for name in args.methods.split(",")}
 
 
-def evaluate(method, query_key, limit):
-    ranks, latencies = [], []
-    for q in queries[:limit]:
-        torch.cuda.synchronize()
-        start = time.time()
-        result = method(q[query_key])
-        torch.cuda.synchronize()
-        latencies.append(time.time() - start)
-        ranks.append(result.indices.index(q["doc_id"]) + 1 if q["doc_id"] in result.indices else None)
-    n = len(ranks)
-    return {"n": n,
-            "recall@1": sum(r is not None and r <= 1 for r in ranks) / n,
-            "recall@5": sum(r is not None and r <= 5 for r in ranks) / n,
-            "recall@10": sum(r is not None and r <= 10 for r in ranks) / n,
-            "mrr@10": sum(1 / r for r in ranks if r is not None and r <= 10) / n,
-            "mean_latency_s": sum(latencies) / n}
-
-
 rag.search(query_text="warm up query")  # first CUDA calls are slow
-
-results = {}
-for query_key in query_sets:
-    for name, (method, limit) in METHODS.items():
-        metrics = evaluate(method, query_key, limit)
-        results[f"{query_key} | {name}"] = metrics
-        print(f"[{query_key:10s}] {name:42s} n={metrics['n']:4d} R@1={metrics['recall@1']:.3f} "
-              f"R@5={metrics['recall@5']:.3f} R@10={metrics['recall@10']:.3f} MRR@10={metrics['mrr@10']:.3f} "
-              f"latency={metrics['mean_latency_s'] * 1000:.0f}ms", flush=True)
-
-(output_dir / f"{args.output_name}.json").write_text(json.dumps(results, indent=1))
-lines = ["| Query set | Method | n | R@1 | R@5 | R@10 | MRR@10 | Latency |", "|---|---|---|---|---|---|---|---|"]
-for key, m in results.items():
-    query_key, name = key.split(" | ")
-    lines.append(f"| {query_key} | {name} | {m['n']} | {m['recall@1']:.3f} | {m['recall@5']:.3f} | {m['recall@10']:.3f} "
-                 f"| {m['mrr@10']:.3f} | {m['mean_latency_s'] * 1000:.0f} ms |")
-(output_dir / f"{args.output_name}.md").write_text("\n".join(lines) + "\n")
-print("\n".join(lines))
+E.run(METHODS, queries, query_sets, output_dir, args.output_name)
+print((output_dir / f"{args.output_name}.md").read_text())
