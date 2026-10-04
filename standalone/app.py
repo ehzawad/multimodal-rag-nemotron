@@ -6,6 +6,10 @@
     python standalone/app.py --query "egg sandwich" --no-rerank --top-k 5
 
 Pipeline: Nemotron Embed VL dense search + BM25 (RRF fusion) -> Nemotron Rerank VL -> Qwen3.5-4B grounded answer.
+With --agent, Qwen3.5-4B first plans the searches with tool calls (translating/rewriting the request), see mmrag/agent.py:
+
+    python standalone/app.py --agent --query "টক দই দিয়ে কলার রুটি" --answer
+    python standalone/app.py --agent --think --query "something warm for a rainy evening, no meat"
 """
 import argparse
 import sys
@@ -22,6 +26,8 @@ parser.add_argument("--no-rerank", action="store_true", help="skip the cross-enc
 parser.add_argument("--rerank-images", action="store_true",
                     help="rerank on recipe image + text (slower) instead of recipe text only")
 parser.add_argument("--answer", action="store_true", help="generate a grounded answer with Qwen3.5-4B")
+parser.add_argument("--agent", action="store_true", help="let Qwen3.5-4B plan the searches with tool calls")
+parser.add_argument("--think", action="store_true", help="with --agent: enable Qwen3.5 thinking (slower)")
 parser.add_argument("--host", default="0.0.0.0")
 parser.add_argument("--port", type=int, default=7860)
 parser.add_argument("--share", action="store_true", help="create a public gradio.live link")
@@ -31,7 +37,7 @@ import torch  # noqa: E402
 from datasets import load_dataset  # noqa: E402
 from PIL import Image  # noqa: E402
 
-from mmrag import pipeline as P  # noqa: E402
+from mmrag import agent as A, pipeline as P  # noqa: E402
 
 print("[INFO] Loading dataset, embeddings and models...")
 start = time.time()
@@ -44,14 +50,22 @@ rag = P.MultimodalRAG(dataset,
 print(f"[INFO] Ready in {time.time() - start:.0f}s | GPU memory: {torch.cuda.memory_allocated() / 1e9:.1f} GB")
 
 
+agent = A.AgenticRAG(rag, think=args.think) if args.agent else None
+
+
 def run(query_text, query_image, rerank=True, rerank_images=False, answer=False, top_k=3):
-    result = rag.search(query_text=query_text, query_image=query_image, k=20)
-    if rerank and result.query_text:
-        result = rag.rerank(result.query_text, result, top_n=20, use_images=rerank_images)
+    if agent is not None:
+        result = agent.search(query_text=query_text, query_image=query_image, k=20,
+                              rerank_top_n=20 if rerank else 0, rerank_images=rerank_images)
+    else:
+        result = rag.search(query_text=query_text, query_image=query_image, k=20)
+        if rerank and result.query_text:
+            result = rag.rerank(result.query_text, result, top_n=20, use_images=rerank_images)
     generated = None
     if answer:
         start_time = time.time()
-        generated = rag.answer(query_text, result, query_image=query_image)
+        generated = (agent.answer(query_text, result, query_image=query_image) if agent is not None
+                     else rag.answer(query_text, result, query_image=query_image))
         result.timings["answer_s"] = round(time.time() - start_time, 3)
     return result, generated, dataset.select(result.indices[:top_k])
 
