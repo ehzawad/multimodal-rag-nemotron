@@ -2,7 +2,7 @@
 
 Meant to be launched on a Colab GPU with colab-persist, e.g.:
 
-    colab-persist run scripts/run_notebook.py --source . --project mmrag -- notebooks/multimodal_rag_tutorial.ipynb
+    colab-persist run scripts/run_notebook.py --source . --project mmrag -- notebooks/multimodal_rag.ipynb
 
 The kernel runs in a scratch directory outside the persisted workspace (downloaded embeddings, images and model
 caches don't need to be checkpointed); the executed notebook is written to $COLAB_OUTPUT_DIR.

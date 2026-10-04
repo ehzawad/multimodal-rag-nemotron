@@ -1,4 +1,4 @@
-"""Build notebooks/multimodal_rag_tutorial.ipynb from the original tutorial notebook with bug fixes.
+"""Build notebooks/multimodal_rag_tutorial_baseline.ipynb from the original tutorial notebook with bug fixes.
 
 Usage: python scripts/build_baseline_notebook.py <original.ipynb>
 """
@@ -8,7 +8,7 @@ import textwrap
 from pathlib import Path
 
 SRC = Path(sys.argv[1])
-DST = Path(__file__).resolve().parent.parent / "notebooks" / "multimodal_rag_tutorial.ipynb"
+DST = Path(__file__).resolve().parent.parent / "notebooks" / "multimodal_rag_tutorial_baseline.ipynb"
 
 nb = json.loads(SRC.read_text())
 cells = nb["cells"]
