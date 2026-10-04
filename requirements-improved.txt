@@ -8,5 +8,6 @@ accelerate>=1.12.0
 datasets>=4.4.2
 safetensors>=0.7.0
 bm25s>=0.2.10
+flash-linear-attention  # fast Qwen3.5 linear-attention kernels (optional, pure Triton)
 gradio>=5
 Pillow

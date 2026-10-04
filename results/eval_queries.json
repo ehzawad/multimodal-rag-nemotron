@@ -1,0 +1,1602 @@
+[
+ {
+  "doc_id": 1824,
+  "title": "easy tuna melt",
+  "paraphrase": "Quick broiled tuna and cheese melt for college lunch",
+  "es": "Tuna y queso gratinados rápido para el almuerzo de la universidad",
+  "bn": "দ্রুত ব্রাইল্ড করা টুনা এবং চিজ মেল্ট কলেজের লঞ্চের জন্য",
+  "zh": "快速烤金枪鱼配芝士融化，适合大学生午餐"
+ },
+ {
+  "doc_id": 409,
+  "title": "pigs in a blanket",
+  "paraphrase": "smoked sausage crescent roll appetizers for fourth of july cookouts",
+  "es": "empanadillas de salchicha ahumada para aperitivos del 4 de julio en barbacoas",
+  "bn": "ফোরথ অফ জুলাই কুকআউটের জন্য স্মোকড সৌজাজ এবং ক্রেসেন্ট রোল দিয়ে তৈরি আনন্দদায়ক খাবার",
+  "zh": "烟熏香肠卷饼 Fourth of July 烧烤开胃菜"
+ },
+ {
+  "doc_id": 4506,
+  "title": "beef noodle skillet",
+  "paraphrase": "Quick one-pan beef and vegetable pasta dinner recipe",
+  "es": "Receta rápida de pasta de un solo sartén con carne y verduras para cena",
+  "bn": "দ্রুত একপ্যান মাংসপেশী এবং সবজির পাস্তা রাতের খাবার রেসিপি",
+  "zh": "快手一锅炖牛肉蔬菜意面晚餐食谱"
+ },
+ {
+  "doc_id": 4012,
+  "title": "pecan pie cookies",
+  "paraphrase": "Quick pecan pie cookies with cream filling for holiday dessert",
+  "es": "Biscuit de piñon con relleno de crema para postre de fin de año",
+  "bn": "হোলিডে ডেসার্টের জন্য দ্রুত প্রস্তুত কেকন পাই কোকিটস ক্রিম ফিলিং সহ",
+  "zh": "快速制作带奶油馅的核桃饼干，作为节日甜点"
+ },
+ {
+  "doc_id": 3657,
+  "title": "twix bars",
+  "paraphrase": "Easy peanut butter chocolate bar cookies with graham cracker crust",
+  "es": "Galletas de barra de chocolate con mantequilla de maní y base de galletas de grúa",
+  "bn": "সহজ পিঁপড়ের তেল চকলেট বার কেক্সি গ্রেহাম ক্রাকার ক্রাস্ট দিয়ে",
+  "zh": "简易花生酱巧克力饼干配格兰尼饼干脆底"
+ },
+ {
+  "doc_id": 2286,
+  "title": "almond bread cookie biscotti",
+  "paraphrase": "Easy diabetic almond loaf baked then sliced for snacks",
+  "es": "Pan de almendras fácil para diabéticos, horneado y cortado para meriendas",
+  "bn": "সহজ ডায়াবেটিসের জন্য আলমন্ড লোফ, পেস্ট্রি করে কাটা স্ন্যাকস",
+  "zh": "简单无糖杏仁面包，烤好后切片当零食"
+ },
+ {
+  "doc_id": 1679,
+  "title": "grilled ham with glaze",
+  "paraphrase": "Quick grilled ham steak with sweet horseradish glaze for summer BBQ",
+  "es": "Pechuga de jamón a la parrilla rápida con glaseado de rábano dulce para barbacoa de verano",
+  "bn": "তরুণ গ্রিলড হ্যাম স্টিকের সাথে মিষ্টি হরসেড গ্লাজেজ, গ্রীষ্মের বিকেল",
+  "zh": "夏日烧烤快速烤火腿牛排配甜辣根酱"
+ },
+ {
+  "doc_id": 8935,
+  "title": "chicken in a cashew nut sauce",
+  "paraphrase": "Quick healthy Indian chicken curry with cashew sauce and mushrooms",
+  "es": "Curry de pollo indio rápido, saludable, con salsa de cacahuete y champiñones",
+  "bn": "দ্রুত স্বাস্থ্যকর ভারতীয় চিকেন কারি ক্যাশু সস এবং শিম সহ",
+  "zh": "快手健康印度鸡肉咖喱配腰果酱和蘑菇"
+ },
+ {
+  "doc_id": 1424,
+  "title": "black bean corn and salsa dip weight watchers",
+  "paraphrase": "Quick black bean corn salsa dip recipe for weight watchers",
+  "es": "Receta de salsa de guisantes negros y maíz para freír, apta para Weight Watchers",
+  "bn": "ওজন কমানোর জন্য দ্রুত কালো মটরশুঁটি ও মরিচের সালসা ডিপ রেসিপি",
+  "zh": "轻食黑豆玉米莎莎蘸酱食谱（适合轻食计划）"
+ },
+ {
+  "doc_id": 9674,
+  "title": "rachael ray s buffalo chicken chili",
+  "paraphrase": "Quick buffalo chicken chili with corn chips and blue cheese",
+  "es": "Chili de pollo búfalo rápido con chips de maíz y queso azul",
+  "bn": "দ্রুত বফালো চিকেন চিলি, কর্ন চিপস এবং ব্লু চিজ দিয়ে",
+  "zh": "快手辣味火鸡面配玉米片和蓝芝士"
+ },
+ {
+  "doc_id": 6912,
+  "title": "baked chicken chimichangas",
+  "paraphrase": "Easy baked chicken chimichangas with cheese and green chili sauce",
+  "es": "Pollo chimichanga horneado fácil con queso y salsa de pimiento verde",
+  "bn": "সহজ বাফন চিকেন চিমিচাঙ্গা, চিজ এবং সবুজ মরিচ সস দিয়ে",
+  "zh": "简单烤鸡肉奇姆恰，配芝士和青椒酱"
+ },
+ {
+  "doc_id": 520,
+  "title": "super easy microwave peanut butter fudge",
+  "paraphrase": "Quick microwave peanut butter and frosting fudge recipe",
+  "es": "Receta rápida de fudge de mantequilla de maní y glaseado para microondas",
+  "bn": "দ্রুত মাইক্রোওয়েভে তৈরি পিঁপড়াপাতলা এবং ফ্রসটিং ফাডজ রেসিপি",
+  "zh": "快速微波炉花生酱糖霜巧克力块食谱"
+ },
+ {
+  "doc_id": 488,
+  "title": "small batch blackberry jam",
+  "paraphrase": "Quick homemade blackberry jam recipe with sugar",
+  "es": "Receta rápida de mermelada casera de frambuesa con azúcar",
+  "bn": "দ্রুত তৈরি স্বাদু কালো বেরি জ্যামের রেসিপি",
+  "zh": "快速自制黑果果酱食谱（加糖）"
+ },
+ {
+  "doc_id": 1535,
+  "title": "no i m not pregnant sandwich",
+  "paraphrase": "Quick peanut butter banana doritos sandwich for kids",
+  "es": "Sándwich rápido de mantequilla de maní, plátano y Doritos para niños",
+  "bn": "বিশেষ করে শিশুদের জন্য দ্রুত প্রস্তুত করা পিঁপড়া মাংসের পেস্ট, বিটু এবং ডোরিটোস দিয়ে তৈরি স্যান্ডউ",
+  "zh": "快手花生酱香蕉多力多滋三明治，适合小朋友"
+ },
+ {
+  "doc_id": 3582,
+  "title": "cookie pie crust",
+  "paraphrase": "Quick orange zest butter cookie pie crust recipe",
+  "es": "Receta de base de torta de galletas de mantequilla con ralladura de naranja rápida",
+  "bn": "দ্রুত তাজা কমলা জেস্ট বাটার কেকি পাই ক্রাস্ট রেসিপি",
+  "zh": "快速橙皮黄油曲奇派皮食谱"
+ },
+ {
+  "doc_id": 3811,
+  "title": "quinoa soup with avocado and corn",
+  "paraphrase": "Quick healthy quinoa soup with avocado and corn",
+  "es": "Sopa de quinoa rápida y saludable con aguacate y maíz",
+  "bn": "দ্রুত স্বাস্থ্যকর কোইনোয়া সোপ, আভোকাদো এবং মটরশুটি দিয়ে",
+  "zh": "快手健康藜麦牛油果玉米汤"
+ },
+ {
+  "doc_id": 8279,
+  "title": "black bean and avocado soup",
+  "paraphrase": "Creamy vegetarian black bean soup with avocado and cheese",
+  "es": "Sopa cremosa de frijoles negros vegetariana con aguacate y queso",
+  "bn": "কিমচি ভাজা",
+  "zh": "奶油素食黑豆汤配牛油果和芝士"
+ },
+ {
+  "doc_id": 9863,
+  "title": "kittencal s chicken cacciatore",
+  "paraphrase": "Italian chicken cacciatore with olives and mushrooms",
+  "es": "Pollo cacciatore italiano con aceitunas y setas",
+  "bn": "ইতালিয়ান চিকেন ক্যাচাতোর, কালো আদা এবং শিম",
+  "zh": "橄榄蘑菇意大利猎鸡"
+ },
+ {
+  "doc_id": 434,
+  "title": "quick bread crumbs for casseroles",
+  "paraphrase": "Golden brown butter and breadcrumb topping for tuna casserole",
+  "es": "Tapa de mantequilla dorada y pan rallado para una cazuela de atún",
+  "bn": "টুনা ক্যাসেরলের জন্য সোনালী রঙের বট্টার ও ক্রাম্বার্স টপিং",
+  "zh": "金棕色黄油面包糠 topping 金枪鱼焗饭"
+ },
+ {
+  "doc_id": 9195,
+  "title": "hungarian meatballs with mushroom gravy",
+  "paraphrase": "Quick beef and mushroom meatballs with sour cream gravy",
+  "es": "Bolas de carne de res y champiñones rápidas con salsa de crema ácida",
+  "bn": "দ্রুত প্রস্তুত হাঁসের মাংস ও শিমলাই মিটবল সরা ক্রিম সস",
+  "zh": "快速牛肉蘑菇肉丸配酸奶油酱汁"
+ },
+ {
+  "doc_id": 3257,
+  "title": "bbq cheeseburger bake",
+  "paraphrase": "Easy ground beef and cheese casserole with biscuits for dinner",
+  "es": "Casserol de carne molida y queso fácil con bizcochos para la cena",
+  "bn": "রাতের খাবারের জন্য সহজ মাংসপেশী এবং চিজ ক্যাসেরল এবং বিস্কুট",
+  "zh": "简单牛肉芝士焗饭配饼干晚餐"
+ },
+ {
+  "doc_id": 8928,
+  "title": "saudi tahini tomato chicken",
+  "paraphrase": "Quick Middle Eastern chicken stew with tahini and tomatoes",
+  "es": "Estofado rápido de pollo mediterráneo con tahini y tomates",
+  "bn": "দ্রুত মধ্যপ্রাচ্যের মাছের স্টু (তাহিনি এবং টমেটো সহ)",
+  "zh": "快手中东风味鸡肉炖菜，配芝麻酱和番茄"
+ },
+ {
+  "doc_id": 6873,
+  "title": "apricot orange barbecued tofu",
+  "paraphrase": "Quick apricot orange tofu recipe with mustard and ginger",
+  "es": "Receta rápida de tofu de albaricoque y naranja con mostaza y jengibre",
+  "bn": "দ্রুত তৈরি করা আর্কিট, কমলা এবং টুফু রেসিপি, যাতে মসুরদানি এবং জিঞ্জিবের ব্যবহার করা হয়েছে।",
+  "zh": "快手杏子橙汁豆腐配芥末姜的做法"
+ },
+ {
+  "doc_id": 3611,
+  "title": "cheese stuffed meatloaf to die for",
+  "paraphrase": "Easy beef meatloaf with cheese and sauce for dinner party",
+  "es": "Carne molida de res fácil con queso y salsa para la cena",
+  "bn": "সরল মাংসপানির মাংসের লোফ, চিজ এবং সস দিয়ে, ডিনার পার্টির জন্য",
+  "zh": "适合晚宴的简单芝士肉酱牛肉饼"
+ },
+ {
+  "doc_id": 7359,
+  "title": "betty s crunchy brownie bars",
+  "paraphrase": "chocolate brownie bars with crunchy oat topping and chocolate frosting",
+  "es": "brownies de chocolate con topping de avena crujiente y glaseado de chocolate",
+  "bn": "চকলেট ব্রাউনি বার, ক্রাঞ্চি অট টপ্পিং এবং চকলেট ফ্রসটিং সহ",
+  "zh": "巧克力布朗尼条，搭配酥脆燕麦顶和巧克力糖霜"
+ },
+ {
+  "doc_id": 9654,
+  "title": "panda express orange chicken",
+  "paraphrase": "Tangy orange chicken recipe with deep fried chicken and sweet sauce",
+  "es": "Receta de pollo naranja picante con pollo frito y salsa dulce",
+  "bn": "স্বাদু কমলা চিকেন রেসিপি, যেখানে গভীর তেল ভাজা চিকেন এবং মিষ্টি সস ব্যবহার করা হয়েছে",
+  "zh": "酸甜橙香炸鸡配甜酱的做法"
+ },
+ {
+  "doc_id": 4557,
+  "title": "feta greek salad",
+  "paraphrase": "Easy feta and olive salad with fresh vegetables",
+  "es": "Ensalada fácil de feta y aceitunas con verduras frescas",
+  "bn": "সহজ ফেটা এবং তেলপাতা স্যালাদ, নতুন সবজির সাথে",
+  "zh": "简单菲达奶酪橄榄沙拉配新鲜蔬菜"
+ },
+ {
+  "doc_id": 106,
+  "title": "campfire muffins",
+  "paraphrase": "Orange peel and blueberry muffin mix baked in hot coals",
+  "es": "Mezcla de muffins con cáscara de naranja y arándanos horneada en brasas calientes",
+  "bn": "গরম কাঁচা জ্বালানিতে পাকা orange peel এবং blueberry muffin মিক্স",
+  "zh": "橙皮蓝莓松饼粉，用热炭烘烤"
+ },
+ {
+  "doc_id": 2615,
+  "title": "alicia s deviled eggs",
+  "paraphrase": "Quick spicy deviled eggs with mustard and pickle juice",
+  "es": "Huevos revueltos rápidos y picantes con mostaza y jugo de pepinillo",
+  "bn": "দ্রুত তৈরি মসলায়াল ডিভিল্ড এগ্স, মাস্টার্ড এবং পিকল জুস দিয়ে",
+  "zh": "快速芥末腌黄瓜汁魔鬼蛋"
+ },
+ {
+  "doc_id": 6924,
+  "title": "bbq pork chops",
+  "paraphrase": "Slow cooked pork chops in tangy vinegar and ketchup sauce",
+  "es": "Costillas de cerdo cocinadas a fuego lento en salsa de vinagre y ketchup",
+  "bn": "ভেজা মসলায় তৈরি ভাজা মাছ",
+  "zh": "慢炖酸甜醋番茄酱猪排"
+ },
+ {
+  "doc_id": 5574,
+  "title": "waldorf coleslaw",
+  "paraphrase": "Creamy apple and celery salad with walnuts for summer potluck",
+  "es": "Ensalada cremosa de manzana y apio con nueces para el parrillada de verano",
+  "bn": "তরল আদা ও ক্যারি স্যালাদে বাদাম",
+  "zh": "夏日聚会用的奶油苹果芹菜沙拉配核桃"
+ },
+ {
+  "doc_id": 4552,
+  "title": "spinach minestrone",
+  "paraphrase": "Quick vegetarian vegetable soup with beans and pasta",
+  "es": "Sopa rápida de verduras y legumbres con lentejas y pasta",
+  "bn": "দ্রুত প্রস্তুতযোগ্য সবজি এবং ডাল-পাস্তা দিয়ে তৈরি ভাজা ভাজা স্পেস",
+  "zh": "快手素蔬菜汤配豆和面"
+ },
+ {
+  "doc_id": 2547,
+  "title": "chicken in you won t believe it s cream sauce",
+  "paraphrase": "Low fat creamy chicken soup cream cheese sauce dinner recipe",
+  "es": "Receta de sopa cremosa de pollo baja en grasa con salsa de queso crema para la cena",
+  "bn": "নিম্নচর্বি ক্রিমি চিকেন সপ, ক্রিম চিজ সস দিয়ে তৈরি রাতের খাবার রেসিপি",
+  "zh": "低脂奶油鸡肉浓汤奶油奶酪酱晚餐食谱"
+ },
+ {
+  "doc_id": 3527,
+  "title": "pickled banana peppers",
+  "paraphrase": "Hot banana pepper relish recipe with vinegar and horseradish",
+  "es": "Receta de ensalada de pimientos de plátano con vinagre y mostaza",
+  "bn": "ভিনেগার এবং হর্সরাডিশ সহ গরম বানানা পেপার রিলিশ রেসিপি",
+  "zh": "带醋和辣根的热香蕉辣椒酱食谱"
+ },
+ {
+  "doc_id": 5514,
+  "title": "apricot nut bread",
+  "paraphrase": "Quick apricot and nut quick bread recipe for holiday gifts",
+  "es": "Receta rápida de pan de almendras y ciruelas para regalos navideños",
+  "bn": "হোলি উপহারের জন্য দ্রুত আপ্রিকট ও নুট কিক ব্রেড রেসিপি",
+  "zh": "快速杏子坚果面包食谱，适合节日送礼"
+ },
+ {
+  "doc_id": 1674,
+  "title": "spicy grilled pineapple",
+  "paraphrase": "Grilled pineapple with cayenne pepper for a tropical side dish",
+  "es": "Piña a la parrilla con pimienta de cayena para un acompañamiento tropical",
+  "bn": "ট্রপিকাল সাইড ডিশ হিসেবে কায়েন্নে পিপার দিয়ে গ্রেইল্ড করা আম",
+  "zh": "烤菠萝配辣椒粉，作为热带配菜"
+ },
+ {
+  "doc_id": 1519,
+  "title": "alton brown s baked brown rice",
+  "paraphrase": "Easy oven baked brown rice with butter and salt",
+  "es": "Arroz integral horneado en el horno con mantequilla y sal",
+  "bn": "সহজ বাতায়ন রান্না করা ব্রাউন রাইস, তেল ও লবণ দিয়ে",
+  "zh": "简单烤箱烤黄油盐糙米饭"
+ },
+ {
+  "doc_id": 6224,
+  "title": "swedish ginger cookies with crystallized ginger",
+  "paraphrase": "crystallized ginger cookies with molasses and spices for holiday baking",
+  "es": "galletas de jengibre cristalizado con melaza y especias para repostería navideña",
+  "bn": "মল্যাস এবং মশলা দিয়ে তৈরি ক্রিস্টালাইজড জিংবার চকলেট, হোলাইডেই বেকিংয়ের জন্য",
+  "zh": "用黑糖和香料制作的晶状姜饼，适合节日烘焙"
+ },
+ {
+  "doc_id": 1584,
+  "title": "4 ingredient chicken santa fe",
+  "paraphrase": "Slow cooker chicken, black beans, and corn salsa recipe",
+  "es": "Receta de salsa de pollo, frijoles negros y maíz para olla lenta",
+  "bn": "স্লো কুকারে তৈরি চিকেন, কালো বিন এবং কমে সালসা রেসিপি",
+  "zh": "慢炖鸡肉黑豆玉米莎莎酱食谱"
+ },
+ {
+  "doc_id": 5881,
+  "title": "spiral herb potato bread bread machine",
+  "paraphrase": "Soft potato bread with herb spiral in bread machine",
+  "es": "Pan de papa suave con espiral de hierbas en la máquina de pan",
+  "bn": "ব্রেড মেশিনে তৈরি মিষ্টি আলু ব্রেডের সাথে সবজি স্পিরাল",
+  "zh": "面包机软土豆面包配香草螺旋"
+ },
+ {
+  "doc_id": 5635,
+  "title": "thai curry paste",
+  "paraphrase": "Quick Thai spice blend with ginger, garlic, and cilantro for easy stir-fry",
+  "es": "Mezcla rápida de especias tailandesas con jengibre, ajo y cilantro para un wok fácil.",
+  "bn": "জিংজার, লবঙ্গ এবং মরিচের সাথে তৈরি দ্রুত থাই মসলা, সহজ স্টাইরফ্রির জন্য",
+  "zh": "快速泰式香料粉，含姜蒜香菜，适合快速炒制"
+ },
+ {
+  "doc_id": 9891,
+  "title": "moussaka style stuffed eggplant aubergine",
+  "paraphrase": "Greek lamb and ricotta stuffed eggplant bake recipe",
+  "es": "Receta de horno de berenjena rellena de cordero griego y ricota",
+  "bn": "গ্রিক স্টাইল লাম্ব এবং রিকোটা ভরা কুমড়ো রান্না",
+  "zh": "希腊风味羊肉与里科塔奶酪馅茄子烤制食谱"
+ },
+ {
+  "doc_id": 4333,
+  "title": "chocolate toffee caramel bars",
+  "paraphrase": "Chocolate toffee caramel bars recipe with cake mix crust",
+  "es": "Receta de barras de caramelo de tórtuga con chocolate y base de mezcla de pastel",
+  "bn": "চকলেট টোফি কারামেল বার রেসিপি কেক মিক্স ক্রাস্ট সহ",
+  "zh": "巧克力太妃焦糖条食谱，搭配蛋糕粉饼底"
+ },
+ {
+  "doc_id": 711,
+  "title": "reese s peanut butter cup cookies",
+  "paraphrase": "Easy Christmas sugar cookie cups filled with peanut butter and chocolate",
+  "es": "Recetas fáciles de galletas de azúcar navideñas en forma de copa rellenas de mantequilla de maní y chocolate",
+  "bn": "সহজ খ্রিস্টমাসের চকলেট ও পিঁপড়া বটার ভরা চকোটে",
+  "zh": "简易圣诞花生酱巧克力夹心糖霜杯"
+ },
+ {
+  "doc_id": 7527,
+  "title": "skillet chicken breast dinner with savory gravy and vegetables",
+  "paraphrase": "Cream of mushroom soup chicken breasts with potatoes and carrots",
+  "es": "Sopa de champiñones cremosa con pechuga de pollo, papas y zanahorias",
+  "bn": "মশরুমের ক্রিম সপ, চিকেন ব্রেস্ট, পট্যাটো এবং ক্যারট",
+  "zh": "奶油蘑菇汤配鸡胸肉、土豆和胡萝卜"
+ },
+ {
+  "doc_id": 8785,
+  "title": "dan s jambalaya",
+  "paraphrase": "Easy chicken and shrimp jambalaya recipe with rice and sausage",
+  "es": "Receta fácil de jambalaya de pollo, camarones, arroz y salchicha",
+  "bn": "সহজ চিকেন ও শিম্পা জাম্বালয়া রেসিপি, সাথে চাল ও সোজাস",
+  "zh": "简单鸡肉虾仁 jambalaya 食谱，配米饭和香肠"
+ },
+ {
+  "doc_id": 2045,
+  "title": "chicken nugget casserole",
+  "paraphrase": "Easy 5-ingredient baked chicken nuggets with spaghetti sauce and cheese",
+  "es": "Receta fácil de nuggets de pollo horneados con 5 ingredientes, salsa de espaguetis y queso",
+  "bn": "সহজ ৫ উপাদানের বেইকড চিকেন নগেটস, স্পাগেটি সস এবং চিজ",
+  "zh": "简单五食材烤鸡块配意面酱和芝士"
+ },
+ {
+  "doc_id": 6201,
+  "title": "black eyed peas with coconut rice and avocado salsa",
+  "paraphrase": "Quick weeknight vegetarian main with black-eyed peas, coconut rice, and avocado salsa",
+  "es": "Plato principal vegetariano para la semana rápida con garbanzos negros, arroz de coco y salsa de aguacate.",
+  "bn": "দ্রুত সপ্তাহের রাতে খাওয়ার জন্য ভাজা মসুর দাল, কক্টেল রাইস এবং আভোকাদো সালসা সহ একটি উদ্ভিদভিত",
+  "zh": "快手周日晚餐素食主菜：黑豆、椰香米饭和牛油果莎莎"
+ },
+ {
+  "doc_id": 1291,
+  "title": "affogato mocha",
+  "paraphrase": "Quick Italian dessert with chocolate ice cream, espresso, and rum",
+  "es": "Postre italiano rápido con helado de chocolate, espresso y ron",
+  "bn": "দ্রুত ইতালীয় ডেসার্ট, চকলেট আইসক্রিম, এসপ্রেসো এবং রুম দিয়ে",
+  "zh": "快速意式甜点：巧克力冰淇淋、浓缩咖啡和朗姆酒"
+ },
+ {
+  "doc_id": 9044,
+  "title": "cabbage potato casserole",
+  "paraphrase": "Slow cooked cabbage and potato bake with bacon and apple",
+  "es": "Huevos de papa y col cocinados a fuego lento con tocino y manzana",
+  "bn": "ব্রাউন সোডা, পট্যাটো, ব্যাকন এবং আপেল দিয়ে তৈরি ধীরভাবে রান্না করা ক্যাবাজ",
+  "zh": "慢炖卷心菜土豆烤菜，配培根和苹果"
+ },
+ {
+  "doc_id": 4803,
+  "title": "fresh plum flan",
+  "paraphrase": "Easy fall fruit cake with plums and cinnamon",
+  "es": "Pastel de otoño fácil con peras y canela",
+  "bn": "সহজ পতঙ্গ ফল কেক, প্লুম এবং জিরা দিয়ে",
+  "zh": "简单的秋季水果蛋糕，配桃子和肉桂"
+ },
+ {
+  "doc_id": 5925,
+  "title": "sage sausage apple walnut stuffing dressing",
+  "paraphrase": "Sage sausage apple walnut stuffing recipe for Thanksgiving dinner",
+  "es": "Receta de relleno de salchicha de eneldo, manzana y nuez para la cena de Acción de Gracias",
+  "bn": "শাকসেরা, মাছ, আদা এবং বাদাম দিয়ে তৈরি থ্যাঙ্কসগিভিং ডিনারের রেসিপি",
+  "zh": "感恩节的鼠尾草香肠苹果核桃馅料食谱"
+ },
+ {
+  "doc_id": 9459,
+  "title": "youvarlakia avgolemono greek meatball egg lemon soup",
+  "paraphrase": "Greek meatball egg lemon soup with rice and vegetables",
+  "es": "Sopa griega de albóndigas de carne, huevo, limón, arroz y verduras",
+  "bn": "গ্ৰীক মাটবল, ডিম, লেবু, চাল আৰু প্ৰজাতিৰ মিশ্ৰণৰ সোপ",
+  "zh": "希腊肉丸鸡蛋柠檬汤配米饭和蔬菜"
+ },
+ {
+  "doc_id": 3150,
+  "title": "strawberry and banana preparado",
+  "paraphrase": "Quick healthy smoothie with strawberries, bananas, and rum",
+  "es": "Batido rápido y saludable con fresas, plátanos y ron",
+  "bn": "শুক্রা, বানান এবং রুম দিয়ে তৈরি দ্রুত স্বাস্থ্যকর স্মুদি",
+  "zh": "快速健康的草莓香蕉朗姆酒冰沙"
+ },
+ {
+  "doc_id": 1139,
+  "title": "tinto de verano",
+  "paraphrase": "Easy red wine and sprite summer cocktail recipe",
+  "es": "Receta de cóctil de vino tinto y Sprite para el verano",
+  "bn": "সহজ লাল বিনো এবং স্প্রাইট সummer ককটেল রেসিপি",
+  "zh": "简易红酒雪碧夏日鸡尾酒做法"
+ },
+ {
+  "doc_id": 750,
+  "title": "absolutely the best southern sweet tea",
+  "paraphrase": "easy hot water steeped sweet tea recipe for picnics",
+  "es": "receta de té dulce hecho con agua caliente para pícnic",
+  "bn": "পিকনিকের জন্য সহজ গরম পানিতে তৈরি মিষ্টি চা রেসিপি",
+  "zh": "适合野餐的简易热水冲泡甜茶做法"
+ },
+ {
+  "doc_id": 3733,
+  "title": "grilled potato planks",
+  "paraphrase": "grilled potato planks with rosemary and garlic for summer side dish",
+  "es": "tablas de patatas a la parrilla con romero y ajo para acompañar de verano",
+  "bn": "রোজমারি এবং ধনে ভাজা পট্যাটো প্লেঙ্ক, গ্রীষ্মের সাইড ডিশ",
+  "zh": "夏季配菜：迷迭香蒜香烤土豆片"
+ },
+ {
+  "doc_id": 4741,
+  "title": "grilled pitas with caramelized onions and goat cheese",
+  "paraphrase": "grilled pitas with caramelized onions and goat cheese",
+  "es": "pitas a la parrilla con cebolla caramelizada y queso cabra",
+  "bn": "পাথরুতে ভাজা পিটা, ক্যারামেলাইজড পেঁয়াজ এবং গোরুর চিজ",
+  "zh": "烤皮塔饼配焦糖洋葱和山羊奶酪"
+ },
+ {
+  "doc_id": 1307,
+  "title": "homemade peanut butter cookies",
+  "paraphrase": "Quick peanut butter drop cookies with egg and vanilla",
+  "es": "Galletas de mantequilla de cacahuete con huevo y vainilla",
+  "bn": "দ্রুত তৈরি মধুপাতা ড্রপ কেক্স, যাতে ডিম ও ভ্যানিলা আছে",
+  "zh": "快手花生酱鸡蛋香草曲奇"
+ },
+ {
+  "doc_id": 3814,
+  "title": "felicity s garlicky grilled chicken",
+  "paraphrase": "Garlic grilled chicken breasts with lemon and parsley marinade",
+  "es": "Pechugas de pollo a la parrilla con marinada de ajo, limón y perejil",
+  "bn": "লেবন ও পার্সলি দিয়ে মারিনেট করা গরুচের মাছ",
+  "zh": "柠檬和欧芹腌制的蒜香烤鸡胸肉"
+ },
+ {
+  "doc_id": 1654,
+  "title": "basic vanilla frosting",
+  "paraphrase": "Quick homemade vanilla buttercream frosting for cakes",
+  "es": "Crema de mantequilla de vainilla casera rápida para pasteles",
+  "bn": "দ্রুত তৈরি স্বাদু ভ্যানিলা বাটারক্রিম ফ্রসটিং কেকের জন্য",
+  "zh": "快手自制香草奶油霜，适合蛋糕"
+ },
+ {
+  "doc_id": 6227,
+  "title": "thai shrimp and noodles",
+  "paraphrase": "One-pan creamy peanut shrimp pasta with broccoli and green onions",
+  "es": "Pasta de camarones con mantequilla de cacahuete, brócoli y cebollino en una sola sartén",
+  "bn": "এক প্যানের ক্রিমি পিঁপড়া মাছ পাস্তা, ব্রোকলি এবং সবুজ পাতলা",
+  "zh": "一锅奶油花生虾仁意面配西兰花和葱花"
+ },
+ {
+  "doc_id": 4554,
+  "title": "strawberry rhubarb pie",
+  "paraphrase": "Quick strawberry rhubarb pie recipe with lattice crust and vanilla ice cream",
+  "es": "Receta rápida de tarta de fresas y rebollo con base de rejilla y helado de vainilla",
+  "bn": "দ্রুত স্ট্রোবারি এবং রহাবার পাই রেসিপি ল্যাটিস ক্রাস্ট সহ এবং ভ্যানিলা আইসক্রিম",
+  "zh": "快速草莓风梨派食谱，配格状酥皮和香草冰淇淋"
+ },
+ {
+  "doc_id": 7428,
+  "title": "chili chicken stir fry with asparagus and bok choy",
+  "paraphrase": "Spicy Asian chicken stir fry with asparagus and bok choy",
+  "es": "Estir-fry de pollo asiático picante con espárragos y bok choy",
+  "bn": "চটপট আশিয়ান স্টাইলের চিকেন স্টাইরফ্রি, যাতে আস্পারাগাস ও বক চয়ে আছে",
+  "zh": "香辣亚洲风味鸡丁炒芦笋与小白菜"
+ },
+ {
+  "doc_id": 5977,
+  "title": "granny molasses cookies",
+  "paraphrase": "old-fashioned spicy molasses cookies with ginger and cinnamon",
+  "es": "galletas de melaza tradicionales con jengibre y canela",
+  "bn": "পুরানো স্টাইলের মসলাযুক্ত মল্যাস কুকেজি, জিংবার এবং কিনামতের সাথে",
+  "zh": "怀旧风姜肉桂黑糖饼干"
+ },
+ {
+  "doc_id": 2664,
+  "title": "sicilian pizza dough",
+  "paraphrase": "Easy Italian pizza dough recipe with garlic and feta toppings",
+  "es": "Receta de masa de pizza italiana fácil con toppings de ajo y feta",
+  "bn": "গার্লিক এবং ফেটা উপকরণ সহ সহজ ইতালীয় পিৎজা টেস্টা রেসিপি",
+  "zh": "简单意大利披萨面团食谱，配蒜蓉和菲达芝士"
+ },
+ {
+  "doc_id": 6065,
+  "title": "honey chilli chicken",
+  "paraphrase": "Quick Asian chicken stir fry with honey and sweet chili sauce",
+  "es": "Estofado rápido de pollo asiático con salsa de miel y chile dulce",
+  "bn": "দ্রুত চীনা স্টাইল চিকেন স্টাইরফ্রি, মধু এবং মিষ্টি চিলি সস দিয়ে",
+  "zh": "快手亚洲风味蜂蜜甜辣酱炒鸡"
+ },
+ {
+  "doc_id": 5820,
+  "title": "all purpose stir fry sauce brown garlic sauce",
+  "paraphrase": "Quick soy garlic ginger stir fry sauce for Asian vegetables",
+  "es": "Salsa rápida de soja, ajo y jengibre para verduras asiáticas",
+  "bn": "দ্রুত সয়ে, লবঙ্গ, জিঞ্জিবের মিশ্রণে ভাজা অ্যাজিয়ান সবজির জন্য সস",
+  "zh": "快手酱油蒜姜炒亚洲蔬菜酱汁"
+ },
+ {
+  "doc_id": 3432,
+  "title": "vegan coconut cream pie filling",
+  "paraphrase": "Quick vegan coconut cream pie filling with tofu and light coconut milk",
+  "es": "Relleno rápido de tarta de coco vegana con tofu y leche de coco ligera",
+  "bn": "দ্রুত ভেজালি কোকোটেইম পাই ফিলিং, টুফু এবং হালকা কোকো মিল দিয়ে",
+  "zh": "快速素食椰奶馅饼馅料，含豆腐和清淡椰奶"
+ },
+ {
+  "doc_id": 4374,
+  "title": "easy italian sausage and pasta skillet meal",
+  "paraphrase": "Quick one-pan Italian sausage, pepper, and pasta dinner",
+  "es": "Cena rápida de salchicha italiana, pimiento y pasta en una sola sartén",
+  "bn": "দ্রুত প্রস্তুত হওয়া একটি প্যানের ইতালীয় সৌস, মরিচ এবং পাস্তা রাতের খাবার",
+  "zh": "快速一锅意大利香肠、青椒和意面晚餐"
+ },
+ {
+  "doc_id": 1169,
+  "title": "pilgrim hat cookies",
+  "paraphrase": "thanksgiving orange frosting chocolate wafer cookies with peanut butter cups",
+  "es": "galletas de galleta de chocolate con frosting de naranja de Acción de Gracias y caramelos de mantequilla de cacahuete",
+  "bn": "ধনবাদ উৎসবের জন্য অরঞ্জ ফ্রসটিং, চকলেট ওফার কুকিজ এবং পিউটবটার ক্যাপস সহ",
+  "zh": "感恩节橙霜巧克力威化饼干配花生酱杯"
+ },
+ {
+  "doc_id": 9980,
+  "title": "bean and sweet potato nachos",
+  "paraphrase": "Vegetarian sweet potato and bean nachos with spicy guacamole",
+  "es": "Nachos de boniato y frijoles vegetarianos con guacamole picante",
+  "bn": "ভেজিটেরিয়ান কুকাড়ি এবং ডাল নাকচোস স্পাইসি গুয়াভামোলে",
+  "zh": "素食红薯与豆类纳乔配辣鳄梨酱"
+ },
+ {
+  "doc_id": 2803,
+  "title": "crumbed beef sausages",
+  "paraphrase": "Easy beef sausage recipe with breadcrumbs and egg",
+  "es": "Receta fácil de salchicha de carne con pan molido y huevo",
+  "bn": "সিম্পল মাছের সৌজাজ রেসিপি, যেখানে ব্রেডক্রম্বস এবং ডিম ব্যবহার করা হয়েছে",
+  "zh": "简单肉肠食谱，含面包糠和鸡蛋"
+ },
+ {
+  "doc_id": 8751,
+  "title": "lentil soup with swiss chard",
+  "paraphrase": "Slow cooker lentil and chard soup with spicy kick",
+  "es": "Sopa de lentejas y espinacas en olla lenta con un toque picante",
+  "bn": "স্লো কুকারে তৈরি মশলাযুক্ত লেঁটেল ও শাকের সপ",
+  "zh": "慢炖扁豆菠菜汤，带点辣味"
+ },
+ {
+  "doc_id": 4010,
+  "title": "simple brown rice pilaf",
+  "paraphrase": "Quick healthy brown rice pilaf with chicken stock and garlic",
+  "es": "Arroz integral rápido y saludable con caldo de pollo y ajo",
+  "bn": "দ্রুত স্বাস্থ্যকর ব্রাউন রাইস পিলাফ, যার মধ্যে চিকেন স্টক এবং লবঙ্গ আছে",
+  "zh": "快手健康藜麦饭，用鸡汤和蒜调味"
+ },
+ {
+  "doc_id": 2677,
+  "title": "fantabulously easy baked beans",
+  "paraphrase": "Quick baked beans with bacon and maple for a picnic dinner",
+  "es": "Bebanes horneadas rápidas con tocino y maple para una cena de picnic",
+  "bn": "পিকনিক ডিনারের জন্য দ্রুত তৈরি করা ব্যাকন এবং ম্যাপল দিয়ে সাজানো বেকেন্ড বিজ",
+  "zh": "快速烤制培根枫糖豆，适合野餐晚餐"
+ },
+ {
+  "doc_id": 7573,
+  "title": "pressure cooker beef stroganoff",
+  "paraphrase": "Quick tender beef stroganoff with mushrooms and sour cream",
+  "es": "Estrogonofa de res tierna y rápida con champiñones y crema ácida",
+  "bn": "দ্রুত প্রস্তুত হওয়ায় সাদা মাংসের স্ট্রোগানফ, মশলা এবং স্যুয়ার ক্রিম সহ",
+  "zh": "快速嫩滑蘑菇酸奶油牛肉酱"
+ },
+ {
+  "doc_id": 6216,
+  "title": "sumi salad",
+  "paraphrase": "Asian picnic salad with ramen noodles and coleslaw",
+  "es": "Ensalada de picnic asiática con fideos de ramen y ensalada de col",
+  "bn": "আশিয়ান পিকনিক স্যাল্যাড, রামেন নুডলস এবং কুলস্লো",
+  "zh": "亚洲野餐沙拉配拉面与卷心菜沙拉"
+ },
+ {
+  "doc_id": 4422,
+  "title": "dilled pot roast crock pot",
+  "paraphrase": "Slow cooker beef roast with yogurt dill sauce and noodles",
+  "es": "Bife de ternero en slow cooker con salsa de yogur y albahaca y fideos",
+  "bn": "স্লো কুকারে রান্না করা মাছুর মাংস, যোগার্ট এবং ডিলের সস সহ নুডলস",
+  "zh": "慢炖牛肉配酸奶莳萝酱和面条"
+ },
+ {
+  "doc_id": 9125,
+  "title": "deluxe tuna casserole with egg noodles",
+  "paraphrase": "Creamy tuna casserole with egg noodles and ritz crackers",
+  "es": "Casserol de atún cremoso con fideos de huevo y galletas Ritz",
+  "bn": "আইস্ক্রিম টিউনা ক্যাসেরল, ডিম নুডলস এবং রিৎস ক্রাকার দিয়ে",
+  "zh": "奶油金枪鱼焗饭配鸡蛋面和瑞兹饼干"
+ },
+ {
+  "doc_id": 3598,
+  "title": "mock feta cheese vegan substitute",
+  "paraphrase": "Quick vegan feta recipe using tofu and herbs",
+  "es": "Receta rápida de feta vegana con tofu y hierbas",
+  "bn": "টুফু এবং সবজি দিয়ে তৈরি দ্রুত ভেজা ভেজা ফেটা",
+  "zh": "用豆腐和香草制作的快速素菲达奶酪食谱"
+ },
+ {
+  "doc_id": 5313,
+  "title": "spiced sweet roasted red pepper feta hummus",
+  "paraphrase": "Easy Middle Eastern roasted red pepper feta hummus recipe",
+  "es": "Receta fácil de hummus de pimiento asado y feta mediterráneo",
+  "bn": "সহজ মধ্যপ্রাচ্যের রোasted লাল মরিচ ফেটা হামাস রেসিপি",
+  "zh": "简单中东风味烤红椒菲达奶酪鹰嘴豆泥食谱"
+ },
+ {
+  "doc_id": 916,
+  "title": "wegman s pork butt steaks",
+  "paraphrase": "oven baked pork butt steaks with garlic and steak seasoning",
+  "es": "costillas de cerdo horneadas con ajo y especias para carne",
+  "bn": "গার্লিক এবং স্টেক সিজনিং দিয়ে ওভনে পক করা পোর্ক বাট স্টিক",
+  "zh": "烤箱烤猪肩肉排配大蒜和牛排调味粉"
+ },
+ {
+  "doc_id": 3752,
+  "title": "my carnitas",
+  "paraphrase": "Slow cooker pork roast with cumin and oregano for Mexican dinner",
+  "es": "Cordero al horno con comino y orégano para cena mexicana",
+  "bn": "মেঝারিন ও অরেগানো দিয়ে তৈরি স্লো কুকারে রান্না করা মুরগির মাংস, মেক্সিকান রাতের খাবারের জন্য",
+  "zh": "慢炖锅烤猪肉配孜然和牛至，做墨西哥晚餐"
+ },
+ {
+  "doc_id": 525,
+  "title": "taco sour cream dip",
+  "paraphrase": "Easy spicy sour cream and taco seasoning dip recipe",
+  "es": "Receta de salsa picante y ácida con crema agria y especias para tacos",
+  "bn": "সহজ মসলাযুক্ত সরাইম এবং টাকো সিজনিং ডিপ রেসিপি",
+  "zh": "简易辣酸奶油塔可调味酱蘸料食谱"
+ },
+ {
+  "doc_id": 5168,
+  "title": "president roosevelt s birthday cake",
+  "paraphrase": "Quick chocolate coffee cake with vinegar and vanilla",
+  "es": "Pastel de chocolate rápido con café, vinagre y vainilla",
+  "bn": "দ্রুত ভিনেগার ও ভ্যানিলা দিয়ে তৈরি চকলেট কফি কেইক",
+  "zh": "快速醋香巧克力咖啡蛋糕"
+ },
+ {
+  "doc_id": 6572,
+  "title": "sour cream cut out cookies with cream cheese icing",
+  "paraphrase": "Tender sour cream cookies with cream cheese frosting recipe",
+  "es": "Receta de galletas de crema ácida tierna con frosting de queso crema",
+  "bn": "সরু, মিষ্টি ক্রিম চকলেট কেকের সাথে ক্রিম চিজ ফ্রসটিং",
+  "zh": "嫩酸奶油夹心饼干配奶油奶酪糖霜食谱"
+ },
+ {
+  "doc_id": 4386,
+  "title": "baked mostaccioli florentine",
+  "paraphrase": "Easy 30-minute spinach pasta bake with cream cheese and mozzarella",
+  "es": "Receta fácil de pasta con espinacas al horno con crema y queso mozzarella en 30 minutos",
+  "bn": "স্পিনাচ, ক্রিম চিজ এবং মোজারেল্লা দিয়ে তৈরি সহজ ৩০ মিনিটের পাস্তা বেক",
+  "zh": "30 分钟简易奶油芝士马苏里拉菠菜意面焗饭"
+ },
+ {
+  "doc_id": 1084,
+  "title": "yummy fast and easy roast beef wrap",
+  "paraphrase": "Quick microwave roast beef and provolone wrap for kids",
+  "es": "Tortilla rápida de carne molida y provolón para el microondas para niños",
+  "bn": "বিশ্বাসী মাইক্রোওয়েভে রোস্ত বীফ এবং প্রোভোলোন ভরাপেট",
+  "zh": "快速微波炉烤牛肉和普罗沃洛内奶酪卷饼，适合孩子"
+ },
+ {
+  "doc_id": 3456,
+  "title": "fabulous shrimp dip",
+  "paraphrase": "Quick creamy shrimp dip recipe with sour cream and lemon",
+  "es": "Receta rápida de dip cremoso de camarones con crema ácida y limón",
+  "bn": "সরু, ক্রিমি শিম্পস ডিপ রেসিপি, যেখানে সোরক্রিম এবং লেবু ব্যবহার করা হয়েছে",
+  "zh": "快速酸奶油柠檬虾酱食谱"
+ },
+ {
+  "doc_id": 9292,
+  "title": "olive garden minestrone soup",
+  "paraphrase": "Hearty Italian minestrone soup with beans, pasta, and parmesan cheese",
+  "es": "Sopa italiana minestrona contundente con lentejas, pasta y queso parmesano",
+  "bn": "চিকন ইতালীয় মিনেস্ট্রোন সপ, ডাল, পাস্তা এবং প্যারমেজান চিজ সহ",
+  "zh": "浓郁意大利扁豆蔬菜汤，配意面和帕玛森芝士"
+ },
+ {
+  "doc_id": 5155,
+  "title": "tantalizing raspberry tarts",
+  "paraphrase": "easy raspberry tart recipe with buttery pastry shells",
+  "es": "receta de tarta de fresas fácil con base de masa horneada",
+  "bn": "সহজ বেরেবেরি টার্ট রেসিপি, মাখনপোড়া পেস্ট্রি শেলস সহ",
+  "zh": "简单覆盆子塔食谱，配酥皮外壳"
+ },
+ {
+  "doc_id": 3483,
+  "title": "cream and crumb schnitz pie",
+  "paraphrase": "Quick apple pie with cream and crumb crust for dessert",
+  "es": "Tarta de manzana rápida con crema y base de migas para postre",
+  "bn": "দ্রুত তৈরি ক্রিম এবং ক্রাম্ব ক্রাস্টের আপেল পাই",
+  "zh": "快速苹果派，奶油与碎皮酥皮，适合做甜点"
+ },
+ {
+  "doc_id": 8179,
+  "title": "rachael ray s linguine with red clam sauce",
+  "paraphrase": "Quick red clam pasta sauce with wine and lemon",
+  "es": "Salsa rápida de mejillones rojos con pasta, vino y limón",
+  "bn": "দ্রুত তৈরি করা লাল কলাম পাস্টা সস, যার মধ্যে ওইন এবং লেবু আছে",
+  "zh": "快速红酒柠檬红蛤意面酱"
+ },
+ {
+  "doc_id": 6482,
+  "title": "cream of the crop celery soup",
+  "paraphrase": "Quick creamy brie and potato celery soup recipe",
+  "es": "Receta de sopa cremosa de brie, patata y apio rápida",
+  "bn": "দ্রুত তৈরি ক্রিমি ব্রি এবং পট্যাটো সেলারি সপ",
+  "zh": "快手奶油布里奶酪土豆芹菜汤食谱"
+ },
+ {
+  "doc_id": 7517,
+  "title": "pot roast pressure cooker",
+  "paraphrase": "Slow cooker beef chuck roast with carrots and potatoes",
+  "es": "Bife de lomo para olla de cocción lenta con zanahorias y patatas",
+  "bn": "স্লো কুকারে রান্না করা বেকন চাক, কলা এবং আদা",
+  "zh": "慢炖牛肩肉配胡萝卜和土豆"
+ },
+ {
+  "doc_id": 2340,
+  "title": "x boyfriend low fat microwave fudge",
+  "paraphrase": "Quick low fat microwave chocolate fudge with nuts",
+  "es": "Fudge de chocolate rápido, bajo en grasa y para microondas con nueces",
+  "bn": "দ্রুত, কম চর্বিযুক্ত মাইক্রোওয়েভ চকলেট ফাডজ",
+  "zh": "快速低脂微波炉巧克力软糖配坚果"
+ },
+ {
+  "doc_id": 4339,
+  "title": "weight watchers crab ricotta basil cannelloni",
+  "paraphrase": "Easy low fat crab ricotta pasta bake with basil",
+  "es": "Pastel de pasta de ricota y cangrejo con albahaca, fácil y bajo en grasas",
+  "bn": "সহজ কম চর্বিযুক্ত ক্রাব রিকোটা পাস্তা বেকের সাথে বাসিল",
+  "zh": "简单低脂蟹乳清干酪烤意面配罗勒"
+ },
+ {
+  "doc_id": 2287,
+  "title": "iron mike s mocha syrup chocolate syrup for espresso drinks",
+  "paraphrase": "Homemade chocolate mocha syrup recipe with cocoa and sugar",
+  "es": "Receta de jarabe de chocolate mocha casero con cacao y azúcar",
+  "bn": "ঘরোয়া চকলেট মোচা সিরপ রেসিপি, যেখানে ককোয়া এবং শর্করা ব্যবহার করা হয়েছে",
+  "zh": "自制可可糖浆食谱，含可可粉和糖"
+ },
+ {
+  "doc_id": 4040,
+  "title": "chipotle lime marinated grilled pork chops or tenderloin",
+  "paraphrase": "grilled pork chops with chipotle lime marinade and cilantro",
+  "es": "Filetes de cerdo a la parrilla con marinada de chipotle, limón y cilantro",
+  "bn": "চিপোটে লাইম মারিনেড এবং করিণ্ডার সাথে গ্রেইল্ড করা মুরগির চ্যাপস",
+  "zh": "烤猪排配 Chipotle 青柠腌料和香菜"
+ },
+ {
+  "doc_id": 9197,
+  "title": "iceberg wedge blue cheese bacon tomato salad",
+  "paraphrase": "homemade blue cheese bacon tomato salad recipe",
+  "es": "receta de ensalada de queso azul, tocino y tomate casera",
+  "bn": "ঘরোয়া ব্লু চিজ ব্যাকন টমেটো সালাড রেসিপি",
+  "zh": "自制蓝纹奶酪培根番茄沙拉食谱"
+ },
+ {
+  "doc_id": 8830,
+  "title": "chipotle tamale pie",
+  "paraphrase": "Easy Mexican turkey and bean cornbread pie recipe",
+  "es": "Receta fácil de torta de maíz con pavo y frijoles mexicanos",
+  "bn": "সহজ মেক্সিকান টার্কি এবং ডাল কর্নব্রেড পাই রেসিপি",
+  "zh": "简单墨西哥风味火鸡豆玉米面包派食谱"
+ },
+ {
+  "doc_id": 4304,
+  "title": "peas and mushroom alfredo",
+  "paraphrase": "Quick creamy pasta with mushrooms and peas for dinner",
+  "es": "Pasta cremosa rápida con champiñones y guisantes para la cena",
+  "bn": "দinner-এর জন্য দ্রুত প্রস্তুত করা ক্রিমি পাস্তা, মশলা এবং মটরশুপা দিয়ে",
+  "zh": "快速奶油蘑菇青豆意面，适合晚餐"
+ },
+ {
+  "doc_id": 9577,
+  "title": "guinness and filet mignon chili",
+  "paraphrase": "Guinness beef chili with steak and beans dinner recipe",
+  "es": "Receta de guiso de carne de res con carne, frijoles y Guinness",
+  "bn": "গিণেস বীফ চিলি স্টেক এবং ডাল দিয়ে তৈরি ডিনার রেসিপি",
+  "zh": "吉尼斯牛肉辣椒配牛排和豆子的晚餐食谱"
+ },
+ {
+  "doc_id": 7019,
+  "title": "sweet orange bbq sauce",
+  "paraphrase": "Easy orange bbq sauce recipe with ketchup and ginger",
+  "es": "Receta fácil de salsa BBQ de naranja con ketchup y jengibre",
+  "bn": "ক্যাচাপ, জিংজার সহ সহজ অরঞ্জ বিকে সোস রেসিপি",
+  "zh": "简单橙汁烧烤酱做法，含番茄酱和姜"
+ },
+ {
+  "doc_id": 9560,
+  "title": "fajita salad",
+  "paraphrase": "Layered beef steak and black bean salad with chipotle dressing",
+  "es": "Ensalada de carne de res en capas con frijoles negros y aderezo chipotle",
+  "bn": "চিপটোলে সস সহ স্তরবদ্ধ বেকন স্টিক এবং কালো মটরশুটি সালাদ",
+  "zh": "分层牛肉牛排与黑豆沙拉配烟熏辣椒酱"
+ },
+ {
+  "doc_id": 6543,
+  "title": "blueberry cream cheese cake",
+  "paraphrase": "Blueberry cream cheese cake with streusel topping",
+  "es": "Pastel de queso azul con topping de streusel",
+  "bn": "ব্লুবারি ক্রিম চিজ কেজি স্ট্রেউসেল টপিং সহ",
+  "zh": "蓝莓奶油芝士蛋糕配碎屑顶"
+ },
+ {
+  "doc_id": 5930,
+  "title": "chicken cream goulash",
+  "paraphrase": "Quick chicken stew with mushrooms and sour cream for dinner",
+  "es": "Estofado de pollo rápido con champiñones y crema ácida para la cena",
+  "bn": "রাতের খাবারের জন্য দ্রুত প্রস্তুত করা মাছুর, শিম এবং সরাউর মাছুর",
+  "zh": "快速蘑菇酸奶油鸡肉炖菜晚餐"
+ },
+ {
+  "doc_id": 3593,
+  "title": "corned beef corn your own",
+  "paraphrase": "Irish corned beef recipe with long curing time for St Patrick's Day",
+  "es": "Receta de carne de res curada irlandesa con tiempo de curado prolongado para el Día de San Patricio",
+  "bn": "সেন্ট প্যাট্রিক্স ডে-এর জন্য দীর্ঘ ক্যুরিং সময়ের আইরিশ কর্নেড বিফ রেসিপি",
+  "zh": "适合圣帕特里克节的长腌制时间爱尔兰腌牛肉食谱"
+ },
+ {
+  "doc_id": 2266,
+  "title": "cheesy tater tots casserole",
+  "paraphrase": "Easy ground beef and tater tots casserole recipe",
+  "es": "Receta de cazuela de carne molida y totos de papa fáciles",
+  "bn": "সহজ মাংসপেশী এবং টেটার টটস ক্যাসেরোল রেসিপি",
+  "zh": "简易牛肉末和土豆饼焗饭食谱"
+ },
+ {
+  "doc_id": 8348,
+  "title": "amazing chicken tortilla soup",
+  "paraphrase": "Spicy Mexican chicken tortilla soup with corn and green peppers",
+  "es": "Sopa de tortilla de pollo mexicana picante con maíz y pimientos verdes",
+  "bn": "মরিচ, কুমড়ো এবং সবুজ মরিচ দিয়ে তৈরি তরল মশলায় ভাজা মেক্সিকান চিকেন টর্টিলা সোপ",
+  "zh": "辣墨西哥鸡肉玉米青椒汤"
+ },
+ {
+  "doc_id": 8085,
+  "title": "cinnamon apple muffins",
+  "paraphrase": "Quick healthy ricotta apple muffins with cinnamon and egg",
+  "es": "Muffins de ricotta y manzana rápidos, sanos, con canela y huevo",
+  "bn": "দ্রুত স্বাস্থ্যকর রিকোটা, আপেল, জিরা এবং ডিমের মফিন",
+  "zh": "快速健康的肉桂鸡蛋乳清干酪苹果松饼"
+ },
+ {
+  "doc_id": 1489,
+  "title": "irish vanilla coffee",
+  "paraphrase": "warm fall cocktail with coffee, irish cream, and vanilla vodka",
+  "es": "cóctel cálido de otoño con café, Irish cream y vodka de vainilla",
+  "bn": "গরম পতঙ্গ ককটেল, কফি, আইরিশ ক্রিম এবং ভ্যানিলা ভোডকা দিয়ে",
+  "zh": "温暖秋季鸡尾酒，含咖啡、爱尔兰奶油利口酒和香草伏特加"
+ },
+ {
+  "doc_id": 771,
+  "title": "fish in the river",
+  "paraphrase": "Cream cheese and goldfish crackers stuffed celery ribs snack",
+  "es": "Bastones de apio rellenos de queso crema y galletas de pescado dorado",
+  "bn": "ক্রিম চিজ এবং গোল্ডফিশ ক্রাকার দিয়ে ভরা কেলারি রিবস স্ন্যাক",
+  "zh": "奶油奶酪和金枪鱼饼干夹心芹菜条零食"
+ },
+ {
+  "doc_id": 1796,
+  "title": "apricot rosemary brie in boule",
+  "paraphrase": "Quick apricot rosemary brie bread bake for holiday appetizers",
+  "es": "Pan de queso brie con romero y albaricoques rápido para antojos de fiesta",
+  "bn": "হোলিডির স্ন্যাকসের জন্য দ্রুত প্রস্তুত করা আপ্রিকট, রসমারি এবং ব্রি চিজের ব্রেড",
+  "zh": "快速杏子迷迭香布里奶酪面包烘焙，适合节日开胃菜"
+ },
+ {
+  "doc_id": 2504,
+  "title": "savory zucchini",
+  "paraphrase": "Quick butter sautéed zucchini and mushrooms side dish recipe",
+  "es": "Receta de acompañamiento de calabacín y champiñones salteados en mantequilla rápida",
+  "bn": "দ্রুত তেলভাজা কুমড়ো ও শিমের সাইড ডিশ রেসিপি",
+  "zh": "快手黄油炒西葫芦蘑菇配菜食谱"
+ },
+ {
+  "doc_id": 2621,
+  "title": "brown rice with sesame seeds",
+  "paraphrase": "Slow-cooked brown rice with butter, onion, and sesame seeds for dinner",
+  "es": "Arroz marrón cocinado a fuego lento con mantequilla, cebolla y semillas de sésamo para la cena",
+  "bn": "শুক্রাভাজন ব্রাউন রাইস, বট্টার, পেঁয়াজ এবং সিমেন্টের সাথে",
+  "zh": "慢炖黄油洋葱芝麻糙米饭，适合晚餐"
+ },
+ {
+  "doc_id": 6916,
+  "title": "the realtor s italian salad dressing",
+  "paraphrase": "Quick Italian salad dressing with olive oil, garlic, and lemon juice",
+  "es": "Aderezo italiano rápido para ensalada con aceite de oliva, ajo y jugo de limón",
+  "bn": "দ্রুত ইতালিয়ান স্যাল্যাড ড্রেসিং, তেল, লবঙ্গ এবং লেবুর রস দিয়ে",
+  "zh": "快速意式沙拉酱，含橄榄油、大蒜和柠檬汁"
+ },
+ {
+  "doc_id": 9771,
+  "title": "algerian poached eggs chakchouka",
+  "paraphrase": "North African pepper ragout with poached eggs for breakfast",
+  "es": "Guiso de pimentón del Norte con huevos pochados para el desayuno",
+  "bn": "ব্রাউনিয়া মসলা দিয়ে তৈরি নর্দা র্যাগুট এবং ভাজা ডিম দিয়ে সাজানো সকালের খাবার",
+  "zh": "北非风味胡椒炖菜配水煮蛋早餐"
+ },
+ {
+  "doc_id": 1040,
+  "title": "peek a boo eggs",
+  "paraphrase": "Quick breakfast bread and egg sandwich with butter",
+  "es": "Panqueque de desayuno rápido con huevo y mantequilla",
+  "bn": "দ্রুত ভোজরুচি ব্রেড এবং ডিম স্যান্ডউইচ তেলপাতা দিয়ে",
+  "zh": "快手早餐面包鸡蛋黄油三明治"
+ },
+ {
+  "doc_id": 6304,
+  "title": "zucchini oatmeal cookies",
+  "paraphrase": "healthy zucchini oatmeal cookies with honey and raisins",
+  "es": "galletas de avena de calabacín saludables con miel y pasas",
+  "bn": "সুস্থ কুশন, ওটমেল, মধু এবং কালো আদা দিয়ে তৈরি কেক",
+  "zh": "健康蜂蜜葡萄干西葫芦燕麦饼干"
+ },
+ {
+  "doc_id": 6252,
+  "title": "broiled indian spiced fish",
+  "paraphrase": "Quick broiled Indian spiced fish with lemon and butter",
+  "es": "Pescado indio a la parrilla con especias, limón y mantequilla",
+  "bn": "দ্রুত তৈরি করা ভুনা ভারতীয় মসলাযুক্ত মাছ লেবু এবং বটের দিয়ে",
+  "zh": "快速烤制印度香料鱼配柠檬和黄油"
+ },
+ {
+  "doc_id": 9763,
+  "title": "yakni pilau chicken rice",
+  "paraphrase": "Homemade Pakistani chicken rice pilau with saffron and almonds",
+  "es": "Arroz pilau de pollo casero pakistaní con azafrán y almendras",
+  "bn": "ঘরোয়া পাকিস্তানি চিকেন রিসি পিলৌ স্যাফ্রান ও আলমন্ড দিয়ে",
+  "zh": "自制藏红花杏仁巴基斯坦鸡肉饭"
+ },
+ {
+  "doc_id": 7668,
+  "title": "my very best spaghetti sauce",
+  "paraphrase": "Slow cooker beef and sausage spaghetti sauce with tomatoes",
+  "es": "Salsa de espaguetis con carne y salchicha para cocinadora lenta con tomates",
+  "bn": "স্লো কুকারে তৈরি মাছুর, সৌজাজ এবং টমেটো স্পাগেটি সস",
+  "zh": "慢炖牛肉香肠番茄意面酱"
+ },
+ {
+  "doc_id": 8669,
+  "title": "mojito mango chicken",
+  "paraphrase": "Caribbean chicken with mango salsa and rum",
+  "es": "Pollo caribeño con salsa de mango y ron",
+  "bn": "কারিবীয় চিকেন, ম্যাঙ্গো সালসা এবং রুম",
+  "zh": "加勒比风味鸡肉配芒果莎莎酱和朗姆酒"
+ },
+ {
+  "doc_id": 4119,
+  "title": "low fat zucchini slice",
+  "paraphrase": "Quick zucchini and egg savory slice recipe for lunch",
+  "es": "Receta rápida de empanada de calabacín y huevo para el almuerzo",
+  "bn": "দ্রুত তৈরি করা কুসুম ও ডিমের স্বাদবহন স্লাইস রেসিপি",
+  "zh": "快手西葫芦鸡蛋咸味卷饼午餐食谱"
+ },
+ {
+  "doc_id": 9064,
+  "title": "chicken and noodle stew",
+  "paraphrase": "One pot chicken pasta stew with vegetables and wine",
+  "es": "Estofado de pasta de pollo en una olla con verduras y vino",
+  "bn": "এক পট চিকেন পাস্তা স্টু, সবজি এবং ওইন দিয়ে",
+  "zh": "一锅炖鸡面，配蔬菜和红酒"
+ },
+ {
+  "doc_id": 188,
+  "title": "easy microwave popcorn",
+  "paraphrase": "Low fat microwave popcorn recipe with salt and margarine",
+  "es": "Receta de palomitas de maíz para microondas con bajo contenido de grasa, sal y margarina",
+  "bn": "চিনিহীন মাইক্রোওয়েভ পপকর্ন রেসিপি, লবণ এবং মার্গারিন দিয়ে",
+  "zh": "低脂微波炉爆米花食谱，加盐和人造黄油"
+ },
+ {
+  "doc_id": 1876,
+  "title": "cheesecake low carb",
+  "paraphrase": "Easy low carb cream cheese dessert with eggs and vanilla",
+  "es": "Postre de queso crema bajo en carbohidratos fácil con huevos y vainilla",
+  "bn": "সহজ লো-কার্ব ক্রিম চিজ ডেসার্ট, ডিম এবং ভ্যানিলা দিয়ে",
+  "zh": "简单低碳水奶油奶酪蛋挞甜点"
+ },
+ {
+  "doc_id": 8797,
+  "title": "mango coconut bread pudding with rum sauce",
+  "paraphrase": "Tropical rum bread pudding with mango and coconut",
+  "es": "Bowl de coco y mango con ron tropical",
+  "bn": "ম্যাঙ্গো এবং ককটেলের সাথে ট্রপিক্যাল রুম ব্রেড পুডিং",
+  "zh": "热带朗姆酒面包布丁配芒果和椰子"
+ },
+ {
+  "doc_id": 4371,
+  "title": "chicken casserole",
+  "paraphrase": "Creamy curry chicken broccoli casserole with stuffing mix",
+  "es": "Crema curry de pollo y brócoli con ensalada de pan",
+  "bn": "ক্রিমি কারি চিকেন ব্রোকলি ক্যাসেরল স্টাফিং মিক্স দিয়ে",
+  "zh": "奶油咖喱鸡肉西兰花焗饭，用面包糠混合"
+ },
+ {
+  "doc_id": 5573,
+  "title": "crispy noodle salad with sweet and sour dressing",
+  "paraphrase": "Asian sweet and sour salad with fried noodles and greens",
+  "es": "Ensalada asiática dulce y agria con fideos fritos y verduras",
+  "bn": "আশিয়ান স্বাদু-কিটনা খাবার, ভাজা নুডলস এবং সবজির সাথে",
+  "zh": "亚洲酸甜沙拉配炸面条和青菜"
+ },
+ {
+  "doc_id": 1827,
+  "title": "peachy treat",
+  "paraphrase": "Quick peach smoothie with yogurt and honey for a healthy breakfast",
+  "es": "Batido rápido de peras con yogur y miel para un desayuno saludable",
+  "bn": "স্বাস্থ্যকর সকালের জন্য যোগুর্ট, মধু এবং দ্রুত তৈরি পেরিক স্মুথি",
+  "zh": "快速酸奶蜂蜜桃子奶昔，健康早餐"
+ },
+ {
+  "doc_id": 4808,
+  "title": "lamb leg steak with maple chevre shiitake sauce",
+  "paraphrase": "Quick French lamb steak with shiitake and maple sauce recipe",
+  "es": "Receta de bistec de cordero francés rápido con setas shiitake y salsa de arce",
+  "bn": "দ্রুত ফরাসি স্টাইলের ল্যাম্ব স্টিক, শিটাকি এবং ম্যাপল সস সহ রেসিপি",
+  "zh": "快速法式黑椒松露羊排配香菇枫糖酱做法"
+ },
+ {
+  "doc_id": 7123,
+  "title": "spicy vegetable quesadillas",
+  "paraphrase": "Quick Tex-Mex vegetable quesadillas with zucchini and peppers",
+  "es": "Quesadillas tex-mexicanas rápidas de verduras con calabacín y pimientos",
+  "bn": "জুকার এবং পেঁয়াজ দিয়ে তৈরি দ্রুত টেক্স-মেক ভেজা পনির প্যাস্তা",
+  "zh": "快速墨西哥风味西葫芦与彩椒蔬菜 quesadilla"
+ },
+ {
+  "doc_id": 2591,
+  "title": "light toasty turkey club sandwich",
+  "paraphrase": "Quick turkey club sandwich with bacon and mayo",
+  "es": "Sandwich club de pavo rápido con tocino y mayonesa",
+  "bn": "দ্রুত তুরকি ক্লাব স্যান্ডউইচ, ব্যাকন এবং মেয়োনেজ",
+  "zh": "快速培根蛋黄酱火鸡俱乐部三明治"
+ },
+ {
+  "doc_id": 7433,
+  "title": "banana cake with crunchy topping",
+  "paraphrase": "Moist banana cake with crunchy coconut and nut topping",
+  "es": "Pastel de plátano húmedo con topping crujiente de coco y nueces",
+  "bn": "সরুসো বাঁধাকেক, ক্রাঞ্চি কোকোনাট এবং ফলক টপিং",
+  "zh": "湿润香蕉蛋糕，搭配脆椰仁和坚果顶"
+ },
+ {
+  "doc_id": 53,
+  "title": "bailey s lucky irishman",
+  "paraphrase": "Easy Irish cream and whiskey cocktail for St. Patrick's Day",
+  "es": "Cóctel fácil de crema irlandesa y whisky para el Día de San Patricio",
+  "bn": "সেন্ট প্যাট্রিক্স ডে-এর জন্য সহজ আইরিশ ক্রিম এবং ওয়াইস্কি মিক্সার",
+  "zh": "适合圣帕特里克节的简易爱尔兰奶油威士忌鸡尾酒"
+ },
+ {
+  "doc_id": 4315,
+  "title": "chocolate cake in a cup gluten free style",
+  "paraphrase": "Quick gluten free chocolate cup cake with chips",
+  "es": "Tarta de chocolate sin gluten rápida con trocitos",
+  "bn": "দ্রুত প্রস্তুত করা গ্লুটেন ফ্রি চকলেট কাপ কেইক চিপস সহ",
+  "zh": "快速无麸质巧克力纸杯蛋糕配巧克力碎"
+ },
+ {
+  "doc_id": 8201,
+  "title": "hot chicken broccoli cole slaw mmin wraps",
+  "paraphrase": "Quick chicken broccoli slaw wraps with hummus filling",
+  "es": "Tortas de pollo y repollo con hummus",
+  "bn": "দ্রুত প্রস্তুত হুমাস ভরা চিকেন ব্রোকলি স্লাউ ওরম",
+  "zh": "快速鸡肉西兰花卷配鹰嘴豆泥馅料"
+ },
+ {
+  "doc_id": 2927,
+  "title": "grilled greek lemon chicken",
+  "paraphrase": "easy grilled chicken with lemon and oregano for dinner",
+  "es": "pollo a la parrilla fácil con limón y orégano para la cena",
+  "bn": "রাতের খাবারের জন্য সহজ লেবু ও অরেগানো দিয়ে ভাজা মাছ",
+  "zh": "简单柠檬罗勒烤鸡晚餐"
+ },
+ {
+  "doc_id": 8317,
+  "title": "banana morning glory muffins cooking light",
+  "paraphrase": "Quick banana muffins with oats and walnuts for breakfast",
+  "es": "Muffins de plátano rápidos con avena y nueces para el desayuno",
+  "bn": "সুপারদ্রুত বানানো বাদাম ও আদা দিয়ে তৈরি অটো ও বাদামের বানা",
+  "zh": "快手燕麦核桃香蕉松饼，早餐必备"
+ },
+ {
+  "doc_id": 1743,
+  "title": "creamy ricotta cheese homemade",
+  "paraphrase": "Easy homemade ricotta cheese recipe with milk, cream, and vinegar",
+  "es": "Receta fácil de queso ricotta casero con leche, crema y vinagre",
+  "bn": "সহজ ঘরোয়া রিকোটা চিজ রেসিপি দুধ, ক্রিম এবং আঁশে",
+  "zh": "简单自制 ricotta 奶酪食谱，使用牛奶、奶油和醋"
+ },
+ {
+  "doc_id": 4889,
+  "title": "key lime pie sugar free splenda",
+  "paraphrase": "Creamy sugar-free lime pie with yogurt and gelatin filling",
+  "es": "Pastel de limón cremoso sin azúcar con relleno de yogur y gelatina",
+  "bn": "কিমি, যোগার্ট এবং জেল্যাটিন দিয়ে তৈরি ক্রিমি শাকারিহীন লাইম পাই",
+  "zh": "酸奶吉利丁奶油无糖青柠派"
+ },
+ {
+  "doc_id": 9977,
+  "title": "baked bread machine focaccia with the works",
+  "paraphrase": "Easy bread machine focaccia with bacon, olives and tomato toppings",
+  "es": "Focaccia fácil para máquina de pan con tocino, aceitunas y topping de tomate",
+  "bn": "সহজ ব্রেড মেশিন ফোকাক্কা, যার উপর ব্যাকন, কালো আদা এবং টমেটো সাজানো",
+  "zh": "简易面包机培根橄榄番茄风味佛卡夏"
+ },
+ {
+  "doc_id": 3258,
+  "title": "chicken baked chops",
+  "paraphrase": "Easy weeknight pork chops with cream soup and worcestershire sauce",
+  "es": "Filetes de cerdo fáciles para la semana con crema y salsa Worcestershire",
+  "bn": "সপ্তাহের রাতে সহজ মাংসের চ্যাপস, ক্রিম সপ এবং ওর্স্টারশায়ার সস",
+  "zh": "简单的一周夜餐：奶油浓汤配伍斯特酱的猪排"
+ },
+ {
+  "doc_id": 6126,
+  "title": "haitian diri ak pwa rice and beans",
+  "paraphrase": "Haitian rice and beans with butter and scotch bonnet pepper",
+  "es": "Arroz y frijoles haitianos con mantequilla y pimiento habanero",
+  "bn": "হাইতীয় ডাল এবং চালের রস, তেলে এবং স্কটচ বনট পেপার দিয়ে",
+  "zh": "海地黄油辣椒豆饭"
+ },
+ {
+  "doc_id": 2646,
+  "title": "rice flour crepes pancakes gluten dairy and egg free",
+  "paraphrase": "Gluten-free egg-free rice flour crepes with coconut milk",
+  "es": "Crepas de harina de arroz sin gluten ni huevo con leche de coco",
+  "bn": "গ্লুটেন-ফ্রি, ডিম-মুক্ত চালপাউডারের ক্রিপস ককোনাট মিল্ক দিয়ে",
+  "zh": "无麸质无蛋椰奶米糊薄饼"
+ },
+ {
+  "doc_id": 8837,
+  "title": "pumpkin spice cake with pumpkin cream cheese frosting",
+  "paraphrase": "moist pumpkin spice cake with creamy orange frosting recipe",
+  "es": "receta de torta de calabaza húmeda con glaseado naranja cremoso",
+  "bn": "সরুপা ও ক্রিমি অরঞ্জ ফ্রসটিংয়ের সাথে আর্দ্র পাম্পকিন স্পাইস কেক রেসিপি",
+  "zh": "湿润南瓜香料蛋糕配奶油橙色糖霜食谱"
+ },
+ {
+  "doc_id": 8689,
+  "title": "mediterranean chicken paella",
+  "paraphrase": "Quick easy chicken rice paella with vegetables and olives",
+  "es": "Paella rápida y fácil de pollo, arroz, verduras y aceitunas",
+  "bn": "দ্রুত এবং সহজ ভাজা মাছের রিস্টা",
+  "zh": "快手简单的鸡肉蔬菜橄榄烩饭"
+ },
+ {
+  "doc_id": 9,
+  "title": "magic bullet powdered sugar",
+  "paraphrase": "How to make homemade powdered sugar from regular sugar",
+  "es": "Cómo hacer azúcar en polvo casero con azúcar normal",
+  "bn": "সাদা চিনি দিয়ে ঘরোয়া পাউডার চিনি তৈরি করার উপায়",
+  "zh": "如何用普通白糖自制糖粉"
+ },
+ {
+  "doc_id": 9813,
+  "title": "chipotle turkey meatloaf",
+  "paraphrase": "Spicy chipotle turkey meatloaf with ketchup glaze baked in oven",
+  "es": "Carne molida de pavo picante con chile chipotle y glaseado de ketchup horneada en el horno",
+  "bn": "চিপটোলে, টার্কি ম্যাক্স এবং ক্যাচাপ ক্রিমের সাথে তৈরি জ্বালানি ম্যাক্স",
+  "zh": "烤箱烤制辣 Chipotle 火鸡肉饼配番茄酱釉"
+ },
+ {
+  "doc_id": 5310,
+  "title": "turnip apple carrot salad with eggs",
+  "paraphrase": "Warm turnip carrot apple salad with poached eggs and yogurt",
+  "es": "Ensalada de nabos, zanahorias y manzana con huevos pochados y yogur",
+  "bn": "গরম কলিজা, কচু এবং আপেল স্যালাদে সাথে ভাজা ডিম এবং যোগার্ট",
+  "zh": "温烤萝卜胡萝卜苹果沙拉配水煮蛋和酸奶"
+ },
+ {
+  "doc_id": 8005,
+  "title": "tangy sweet and sour pork shoulder steak bake",
+  "paraphrase": "Slow baked pork shoulder steak in tangy sweet and sour sauce",
+  "es": "Corte de lomo de cerdo asado lentamente en salsa cítrica dulce y ácida",
+  "bn": "স্লো-বেকড পোর্ক শাওয়ার স্টিক টাংসি সুইট অ্যান্ড সাউর সোয়েসে",
+  "zh": "慢烤带皮猪肩肉配酸甜酱汁"
+ },
+ {
+  "doc_id": 319,
+  "title": "latte macchiato 3 layered coffee",
+  "paraphrase": "Easy Italian 3-layered espresso milk foam coffee recipe",
+  "es": "Receta fácil de espuma de leche de café italiana de 3 capas",
+  "bn": "সহজ ইতালিয়ান ৩ স্তরী এস্প্রে মিল্ক ফোম কফি রেসিপি",
+  "zh": "简易意式三层浓缩奶泡咖啡做法"
+ },
+ {
+  "doc_id": 1832,
+  "title": "pasta in tomato cream sauce",
+  "paraphrase": "Quick Italian penne with tomatoes, cream, and basil for a weeknight dinner",
+  "es": "Pasta penne italiana rápida con tomate, crema y albahaca para cena de semana",
+  "bn": "সপ্তাহের রাতে খাবারের জন্য দ্রুত ইতালীয় পেন্নে, টমেটো, ক্রিম এবং বাসিল দিয়ে",
+  "zh": "快速意式通心粉配番茄、奶油和罗勒，适合一周晚餐"
+ },
+ {
+  "doc_id": 5947,
+  "title": "overnight cinnamon rolls",
+  "paraphrase": "Easy overnight cinnamon rolls with butter and brown sugar filling",
+  "es": "Rolls de canela fáciles para la noche con relleno de mantequilla y azúcar moreno",
+  "bn": "সহজ ওভারনাইট সিদ্ধির রোল, বট্টার ও ব্রাউন শাকার ভরা",
+  "zh": "简单隔夜肉桂卷，内馅为黄油和红糖"
+ },
+ {
+  "doc_id": 5038,
+  "title": "perky olive penguins",
+  "paraphrase": "Stuffed olives with cream cheese for a holiday appetizer",
+  "es": "Olivas rellenas de queso crema para un antojo de fiesta",
+  "bn": "হোলিডির স্ন্যাক হিসেবে ক্রিম চিজ দিয়ে ভরা অলিভ",
+  "zh": "奶油奶酪馅橄榄，节日开胃菜"
+ },
+ {
+  "doc_id": 3923,
+  "title": "healthy fried rice",
+  "paraphrase": "Quick brown rice stir fry with egg and veggies",
+  "es": "Arroz integral rápido a la plancha con huevo y verduras",
+  "bn": "দ্রুত ব্রাউন রাইসের সাথে ডিম ও সবজি স্টাইরফ্রাই",
+  "zh": "快手糙米饭炒饭配鸡蛋和蔬菜"
+ },
+ {
+  "doc_id": 949,
+  "title": "green beans canning raw pack",
+  "paraphrase": "Pressure can green beans with salt for summer dinner",
+  "es": "Cebollines en presión con sal para cena de verano",
+  "bn": "বরষার রাতে লবণ দিয়ে চাপের পাত্রে সবজি",
+  "zh": "夏天晚餐用盐罐装青豆"
+ },
+ {
+  "doc_id": 3946,
+  "title": "hot tuna sandwich",
+  "paraphrase": "Spicy tuna sandwich with jalapeno and cream cheese in foil",
+  "es": "Sandwich de atún picante con jalapeño y queso crema en papel aluminio",
+  "bn": "ফুলা জালপেনো এবং ক্রিম চিজ সহ মরিচযুক্ত টুনা স্যান্ডউইচ ফয়েলে",
+  "zh": "锡纸烤辣金枪鱼三明治配辣椒和奶油奶酪"
+ },
+ {
+  "doc_id": 9295,
+  "title": "one dish scallop meal",
+  "paraphrase": "Quick one-pot scallop rice dinner with vegetables and herbs",
+  "es": "Cena rápida de arroz con mejillones, verduras y hierbas en una sola olla",
+  "bn": "দ্রুত তৈরি একপট স্ক্যালপ রাইস ডিনার সবজি এবং সবুজির সাথে",
+  "zh": "快速一锅出海鲜饭，配蔬菜和香草"
+ },
+ {
+  "doc_id": 1290,
+  "title": "virgin strawberry daiquiri",
+  "paraphrase": "healthy frozen strawberry lime cocktail recipe for summer",
+  "es": "receta de cóctel de fresas y limón congelado y saludable para el verano",
+  "bn": "সুস্থ ফ্রোজেন স্ট্রোবেরি লাইম কোকটেল রেসিপি",
+  "zh": "夏日健康冷冻草莓青柠鸡尾酒食谱"
+ },
+ {
+  "doc_id": 1403,
+  "title": "easiest peanut butter fudge ever",
+  "paraphrase": "Quick microwave peanut butter fudge recipe for beginners",
+  "es": "Receta rápida de fudge de mantequilla de maní para microondas para principiantes",
+  "bn": "শুরুতেদের জন্য দ্রুত মাইক্রোওয়েভে তৈরি পিঁপড়াপাতলা চকলেট রেসিপি",
+  "zh": "适合新手的快速微波炉花生酱软糖食谱"
+ },
+ {
+  "doc_id": 7962,
+  "title": "vietnamese spring rolls",
+  "paraphrase": "Crispy fried pork and vegetable spring rolls for appetizers",
+  "es": "Rulos de cerdo y verduras crujientes para antojitos",
+  "bn": "স্প্রিং রোলসের জন্য ক্রিস্পি ভাজা মাংস ও সবজি",
+  "zh": "脆皮炸猪肉蔬菜春卷，适合做开胃菜"
+ },
+ {
+  "doc_id": 1133,
+  "title": "amaranth basic recipe",
+  "paraphrase": "Quick amaranth rice side dish for healthy vegetarian dinner",
+  "es": "Plato lateral de arroz de amapola rápido para cena vegetariana saludable",
+  "bn": "সুস্থ ভেষজ রাতের খাবারের জন্য দ্রুত তৈরি আমানথ চালের পাশাপাশি খাবার",
+  "zh": "快手藜麦米饭，健康素食晚餐"
+ },
+ {
+  "doc_id": 8727,
+  "title": "tofu pot pie",
+  "paraphrase": "Vegan potato carrot tofu pie with flaky crust",
+  "es": "Tarta de patata, zanahoria y tofu sin gluten con masa hojaldrada",
+  "bn": "ভেজান পট্যাট, ক্যারট এবং টুফু দিয়ে তৈরি ফ্ল্যাকি ক্রাস্টযুক্ত পাই",
+  "zh": "酥皮素土豆胡萝卜豆腐派"
+ },
+ {
+  "doc_id": 2060,
+  "title": "cornbread pudding cake tomalito",
+  "paraphrase": "moist cornbread pudding with kernels for a kid-friendly side dish",
+  "es": "pudding de maíz húmedo con granos para un acompañante infantil",
+  "bn": "বিশাল কমেড পুডিং, যাতে কমেডের কের্নেল থাকে, যা শিশুদের জন্য উপযোগী একটি সাইড ডিশ।",
+  "zh": "湿润的带粒玉米布丁，适合儿童食用的配菜"
+ },
+ {
+  "doc_id": 2103,
+  "title": "oven roasted hot dogs",
+  "paraphrase": "Crispy oven roasted hot dogs with cheese and mustard",
+  "es": "Salchichas asadas en horno crujientes con queso y mostaza",
+  "bn": "চিপসি ওভেনে রোস্ত করা হট ডগস, চিজ এবং মাস্টার্ড দিয়ে",
+  "zh": "脆皮烤箱烤热狗配芝士和芥末酱"
+ },
+ {
+  "doc_id": 7787,
+  "title": "moroccan chicken salad for a starry night",
+  "paraphrase": "Moroccan chicken salad with roasted peppers and lemon vinaigrette",
+  "es": "Ensalada de pollo marroquí con pimientos asados y vinagreta de limón",
+  "bn": "রসুন ও লেবু ভিনেগ্রেটের সাথে রসুন ও লেবু ভিনেগ্রেটের সাথে রসুন ও লেবু ভিনেগ্রেটের সাথে",
+  "zh": "摩洛哥烤椒柠檬油醋汁鸡肉沙拉"
+ },
+ {
+  "doc_id": 9007,
+  "title": "awesome roasted potatoes with sour cream dip",
+  "paraphrase": "Easy roasted potatoes with sour cream dip recipe",
+  "es": "Receta de papas asadas fáciles con dip de crema ácida",
+  "bn": "সরল রসুন ও ক্যাম্পার চিনির রসুন ডিপ সহ রোasted পট্যাট রেসিপি",
+  "zh": "简易烤土豆配酸奶油蘸酱食谱"
+ },
+ {
+  "doc_id": 2705,
+  "title": "oven baked white rice perfect every time",
+  "paraphrase": "Easy oven baked white rice with carrots and chicken stock",
+  "es": "Arroz blanco al horno fácil con zanahorias y caldo de pollo",
+  "bn": "সহজ বাতায়ন রান্না করা সাদা চাল, ক্যারট এবং চিকেন স্টক",
+  "zh": "简单烤箱烤白米饭配胡萝卜和鸡汤"
+ },
+ {
+  "doc_id": 4342,
+  "title": "hash browns ham quiche",
+  "paraphrase": "Easy breakfast quiche with ham, potatoes, and cheese",
+  "es": "Torta de desayuno fácil con jamón, patatas y queso",
+  "bn": "হাম, পট্যাটো এবং চিজ দিয়ে সহজ ব্রেকফাস্ট কুইচ",
+  "zh": "简易火腿土豆芝士早餐派"
+ },
+ {
+  "doc_id": 8645,
+  "title": "mexican ground beef tortilla layer casserole",
+  "paraphrase": "Easy Mexican beef and bean tortilla casserole recipe",
+  "es": "Receta de cazuela de tortilla mexicana fácil con carne y frijoles",
+  "bn": "সহজ মেক্সিকান মাংস ও ডাল টর্টিলা ক্যাসেরোল রেসিপি",
+  "zh": "简易墨西哥风味牛肉豆卷饼焗饭食谱"
+ },
+ {
+  "doc_id": 9938,
+  "title": "spanish chicken legs and thighs with olives and capers",
+  "paraphrase": "Easy Spanish chicken thighs with olives, capers and potatoes",
+  "es": "Pollo con pierna, aceitunas, caprichos y patatas",
+  "bn": "সহজ স্প্যানিশ স্টাইলের চিকেন থাই, অলিভ, ক্যাপার্স এবং পট্যাট",
+  "zh": "简单西班牙风味鸡胸肉配橄榄、酸豆和土豆"
+ },
+ {
+  "doc_id": 6932,
+  "title": "malibu chicken",
+  "paraphrase": "Ham and cheese chicken breasts baked with dipping sauce",
+  "es": "Pechugas de pollo con jamón y queso horneadas con salsa para sumergir",
+  "bn": "চিকেন ব্রেস্ট, ক্যামেরি এবং ডিপিং সস দিয়ে বেইক করা",
+  "zh": "蘸酱烤火腿芝士鸡胸肉"
+ },
+ {
+  "doc_id": 3470,
+  "title": "hawaiian beets",
+  "paraphrase": "Quick pineapple and beet sauce with butter and lemon",
+  "es": "Salsa rápida de piña y remolacha con mantequilla y limón",
+  "bn": "দ্রুত তৈরি পিনাপল এবং বেটি সস, বট্টার ও লেবুর সাথে",
+  "zh": "快速菠萝甜菜酱，配黄油和柠檬"
+ },
+ {
+  "doc_id": 8835,
+  "title": "5 steak rubs for grilling",
+  "paraphrase": "grilled steak rubs with chipotle, cumin, cocoa, and spices",
+  "es": "mariadas para carne a la parrilla con chipotle, comino, cacao y especias",
+  "bn": "চিপটোলে, কুমিন, ককো এবং মশলা দিয়ে সাজানো গ্রেইল্ড স্টিক",
+  "zh": "烤牛排用辣椒粉、孜然、可可粉和香料腌制"
+ },
+ {
+  "doc_id": 3295,
+  "title": "perfectly easy dinner rolls",
+  "paraphrase": "homemade yeast dinner rolls recipe for large groups",
+  "es": "receta de panes de levadura caseros para grandes grupos",
+  "bn": "বড় গ্রুপের জন্য হোমমেড যিস্ট ডিনার রোল রেসিপি",
+  "zh": "适合大份量的自制酵母餐包食谱"
+ },
+ {
+  "doc_id": 5107,
+  "title": "southwestern stuffed bell peppers",
+  "paraphrase": "Easy beef and rice stuffed peppers with salsa and cheese",
+  "es": "Pimientos rellenos de carne de res y arroz con salsa y queso fáciles",
+  "bn": "সহজ মাছের মাংস এবং চাল ভরা কপি কপি, সালসা এবং চিজ সহ",
+  "zh": "简单版：肉末和米饭馅的烤彩椒，配莎莎酱和芝士"
+ },
+ {
+  "doc_id": 6537,
+  "title": "penne with roasted tofu peppers and spinach in garlic sauce",
+  "paraphrase": "Vegetarian roasted tofu and pepper pasta with garlic sauce",
+  "es": "Pasta vegetariana con tofu asado y pimientos, salsa de ajo",
+  "bn": "ভাজা টফু এবং মরিচের সাথে গার্লিক সসের পাস্তা",
+  "zh": "素食烤豆腐与青椒意面配蒜酱"
+ },
+ {
+  "doc_id": 6118,
+  "title": "overnight crunch coffee cake",
+  "paraphrase": "Buttermilk coffee cake with pecan topping for Christmas morning",
+  "es": "Pastel de café con leche con cobertura de pacanas para la mañana de Navidad",
+  "bn": "খ্রিস্টমাসের সকালে খেতে হলে বটারমিল্ক কফি কেইক এবং পেকান টপ্পিং",
+  "zh": "圣诞早晨的黄油牛奶核桃顶蛋糕"
+ },
+ {
+  "doc_id": 7177,
+  "title": "easy hungarian mushroom soup",
+  "paraphrase": "Creamy mushroom soup with paprika and sour cream for winter dinner",
+  "es": "Sopa cremosa de champiñones con pimentón y crema ácida para cena de invierno",
+  "bn": "শীতের রাতে খাওয়ার জন্য পাপরিকা এবং সরাউর ক্রিমের সাথে ক্রিমি মশরুম সোপ",
+  "zh": "冬日晚餐：奶油蘑菇汤配红椒粉和酸奶油"
+ },
+ {
+  "doc_id": 8479,
+  "title": "asian ground beef pepper and onion saute",
+  "paraphrase": "Saucy Asian ground beef stir fry with peppers and onions",
+  "es": "Estofado asiático de carne molida con pimientos y cebolla",
+  "bn": "চিকেন না, মাছ না, বোম্বাই ভাব, মসলা ভাব, বাজার ভাব, বাজারের ভাব, বাজারের ভাব, বাজারের ভ",
+  "zh": "酱汁浓郁的亚洲风味牛肉炒肉片，配青椒洋葱"
+ },
+ {
+  "doc_id": 7397,
+  "title": "festive butter almond loaf",
+  "paraphrase": "moist butter almond loaf recipe for christmas dessert",
+  "es": "receta de pan de almendras húmedo con mantequilla para postre de Navidad",
+  "bn": "চরমোৎসবের মিষ্টি ভাজা হিসেবে আর্কান্ড ও বটারের নরম লোফ রেসিপি",
+  "zh": "圣诞甜点湿润黄油杏仁面包食谱"
+ },
+ {
+  "doc_id": 1982,
+  "title": "everything sauce for baked potatoes",
+  "paraphrase": "Quick baked potato topping with sour cream, cheddar, bacon, and green onions",
+  "es": "Topping para papas al horno rápido con crema ácida, cheddar, tocino y cebollino.",
+  "bn": "দ্রুত বাউন্ড পট্যাট টপিং, সাথে সোরক্রিম, চেডার, ব্যাকন এবং সবুজ পদ্মপালা",
+  "zh": "快速烤土豆顶料，配酸奶油、切达奶酪、培根和葱花"
+ },
+ {
+  "doc_id": 4061,
+  "title": "kimchee chigae",
+  "paraphrase": "Spicy Korean stewed pork with kimchee and red peppers",
+  "es": "Estofado de cerdo coreano picante con kimchi y pimientos rojos",
+  "bn": "কিমচি এবং লাল মরিচ দিয়ে তৈরি মসালার ময়দা",
+  "zh": "韩式辣炖猪肉配泡菜和红椒"
+ },
+ {
+  "doc_id": 3681,
+  "title": "sandy s holiday mashed potato casserole",
+  "paraphrase": "Cream cheese and sour cream mashed potato casserole recipe for holiday dinner",
+  "es": "Receta de puré de patatas con queso crema y crema ácida para la cena de fin de semana",
+  "bn": "হোলিডির ডিনারে উপযোগী ক্রিম চিজ এবং সোর ক্রিম দিয়ে তৈরি ম্যাশড পট্যাট ক্যাসেরল রেসিপি",
+  "zh": "节日晚餐用的奶油奶酪和酸奶油土豆泥焗饭食谱"
+ },
+ {
+  "doc_id": 1049,
+  "title": "chocolate peppermint spoons",
+  "paraphrase": "Easy chocolate dipped spoons with peppermint candy for hot cocoa gifts",
+  "es": "Cucharas de chocolate con caramelo de menta para regalos de chocolate caliente",
+  "bn": "হট ককোয়া গিফটের জন্য সহজ চকলেট ডাইপড চামচ এবং পেপারমিন্ট ক্যান্ডি",
+  "zh": "简易巧克力蘸勺配薄荷糖，作为热巧克力礼物"
+ },
+ {
+  "doc_id": 5539,
+  "title": "easy homemade granola",
+  "paraphrase": "Cinnamon honey oat bake with nuts and dried fruit",
+  "es": "Torta de avena con miel, canela, nueces y frutas secas",
+  "bn": "চিনিমতি, মধু ও ফলমিষ্টি দিয়ে তৈরি অট বাটের রেসিপি",
+  "zh": "肉桂蜂蜜燕麦烤饼配坚果和干果"
+ },
+ {
+  "doc_id": 344,
+  "title": "maple syrup candy",
+  "paraphrase": "Easy maple syrup candy recipe for holiday desserts",
+  "es": "Receta fácil de caramelo de sirope de arce para postres de temporada",
+  "bn": "হোলিড ডেসার্টের জন্য সহজ ম্যাপল সিরপ ক্যান্ডি রেসিপি",
+  "zh": "简单的枫糖浆糖果食谱，适合节日甜点"
+ },
+ {
+  "doc_id": 9638,
+  "title": "mushroom rogan josh",
+  "paraphrase": "Indian vegetarian curry with mushrooms and yogurt",
+  "es": "Curri indio vegetariano con champiñones y yogur",
+  "bn": "মশরুম এবং যোগুর্ট সহ ভারতীয় ভেজান",
+  "zh": "印度素食蘑菇酸奶咖喱"
+ },
+ {
+  "doc_id": 9075,
+  "title": "chicken sausage gumbo",
+  "paraphrase": "Low fat chicken sausage gumbo recipe with okra and rice",
+  "es": "Receta de gumbo de salchicha de pollo baja en grasa con okra y arroz",
+  "bn": "চিকেন সৌজাজ গাম্বো রেসিপি, যাতে মটরশুঁটি এবং চাল আছে এবং এতে কম চর্বি আছে",
+  "zh": "低脂鸡肉香肠嘎布汤食谱，配秋葵和米饭"
+ },
+ {
+  "doc_id": 3770,
+  "title": "quick easy eggplant parmesan in the microwave",
+  "paraphrase": "Microwave eggplant parmesan with tomato sauce and cheese",
+  "es": "Berenjena al horno con salsa de tomate y queso en microondas",
+  "bn": "মাইক্রোওয়েভে টমেটো সস এবং চিজ সহ কুমড়ো পারমেজান",
+  "zh": "微波炉版番茄酱芝士烤茄子"
+ },
+ {
+  "doc_id": 9641,
+  "title": "new orleans red beans and rice",
+  "paraphrase": "Slow cooker red beans and rice with ham and pork",
+  "es": "Lentejas y arroz en olla lenta con jamón y cerdo",
+  "bn": "হ্যাম এবং ছাগল মাংস সহ স্লো কুকারে রান্না করা লাল মশলায় রান্না করা লাল মশলায় রান্না করা লাল মশ",
+  "zh": "慢炖锅红腰豆米饭配火腿和猪肉"
+ },
+ {
+  "doc_id": 3608,
+  "title": "ginger spiced tea",
+  "paraphrase": "Spiced tea with ginger, cardamom, and orange for romantic dinner party",
+  "es": "Té especiado con jengibre, canela y naranja para una cena romántica",
+  "bn": "জিংকর, কাদমুখবাত এবং কমলা দিয়ে তৈরি মিষ্টি চা, রোমান্টিক ডিনার পার্টির জন্য",
+  "zh": "姜、豆蔻和橙子的香料茶，适合浪漫晚餐派对"
+ },
+ {
+  "doc_id": 117,
+  "title": "chewbacca",
+  "paraphrase": "Spiced rum and root beer cocktail recipe for Caribbean shift drinks",
+  "es": "Receta de cóctel de ron con especias y cerveza de raíz para bebidas de cambio caribeño",
+  "bn": "ক্যারিবীয় শিফট ড্রিংকসের জন্য মসলায়িত রুম এবং রুট বার মিক্সার রেসিপি",
+  "zh": "加勒比风格鸡尾酒：香料朗姆酒与根啤酒配方"
+ },
+ {
+  "doc_id": 1163,
+  "title": "chocolate pretzel ring candies",
+  "paraphrase": "Easy chocolate pretzel ring candies with m&ms for holiday treats",
+  "es": "Galletas de pretzel anulares de chocolate fáciles con M&Ms para postres de temporada",
+  "bn": "হোলিডির মিষ্টি খাবারের জন্য সহজ চকলেট প্রেটজেল রিং ক্যান্ডি এবং এমএমস",
+  "zh": "简单巧克力椒盐卷饼圈糖果配 M&M 巧克力豆，节日小点心"
+ },
+ {
+  "doc_id": 964,
+  "title": "pineapple orange smoothie",
+  "paraphrase": "Refreshing tropical fruit smoothie with yogurt and orange juice",
+  "es": "Batido refrescante de frutas tropicales con yogur y jugo de naranja",
+  "bn": "ফ্রেশ ট্রপিক্যাল ফল, যোগার্ট এবং অরঞ্জ জুস দিয়ে তৈরি স্মুথি",
+  "zh": "清爽热带水果酸奶橙汁冰沙"
+ },
+ {
+  "doc_id": 3750,
+  "title": "best baked ziti",
+  "paraphrase": "Ground beef ziti with sour cream and provolone baked in oven",
+  "es": "Ziti de carne molida con crema ácida y provolón horneado",
+  "bn": "অভিষেক মাছের মাংস, সরা ক্রিম এবং প্রোভলোন দিয়ে তৈরি জিটি",
+  "zh": "烤箱烤酸奶油和普罗沃洛内芝士牛肉杂面"
+ }
+]
