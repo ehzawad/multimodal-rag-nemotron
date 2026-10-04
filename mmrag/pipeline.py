@@ -127,10 +127,15 @@ def load_document_embeddings(path=None, device="cuda"):
     if path is None:
         original = os.environ.get("MMRAG_NEMOTRON_REVISIONS") == "original"
         path = EMBEDDING_FILE if original else os.environ.get("MMRAG_EMBEDDINGS", REEMBEDDED_FILE)
+    if not os.path.exists(path) and path != EMBEDDING_FILE:
+        import warnings
+
+        warnings.warn(f"{path} not found, falling back to the demo Space's precomputed embeddings. These were made "
+                      f"with the tutorial's pinned embed commit and only roughly match the official revision loaded "
+                      f"here (cosine ~0.86), which costs retrieval quality. Run scripts/build_nemotron_embeddings.py "
+                      f"(~1.5h on an L4) to re-embed the corpus.")
+        path = EMBEDDING_FILE
     if not os.path.exists(path):
-        if path != EMBEDDING_FILE:
-            raise FileNotFoundError(f"{path} not found: run scripts/build_nemotron_embeddings.py first "
-                                    f"(or set MMRAG_NEMOTRON_REVISIONS=original with transformers 4.57.x)")
         path = hf_hub_download(repo_id=SPACE_REPO, repo_type="space", filename=EMBEDDING_FILE)
     embeddings = load_file(path)["image_text_embeddings"].to(device=device, dtype=torch.float32)
     return torch.nn.functional.normalize(embeddings, dim=-1)
