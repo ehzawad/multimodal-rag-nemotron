@@ -1,0 +1,7 @@
+# Google Colab already provides torch/torchvision; versions below match the baseline notebook's install cell
+transformers==4.57.3
+accelerate>=1.12.0
+datasets>=4.4.2
+safetensors>=0.7.0
+qwen-vl-utils==0.0.14
+gradio>=5

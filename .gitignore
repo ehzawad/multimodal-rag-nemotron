@@ -1,0 +1,8 @@
+*.bak
+*.safetensors
+kitchen_bench.png
+demo/
+outputs/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
