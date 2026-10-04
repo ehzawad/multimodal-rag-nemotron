@@ -162,6 +162,17 @@ class BM25Index:
         self.retriever.index(bm25s.tokenize([recipe_to_search_text(t) for t in texts], stopwords="en",
                                             show_progress=False), show_progress=False)
 
+    def vocabulary_coverage(self, query: str) -> float:
+        """Fraction of the query's (non-stopword) tokens that occur in the corpus vocabulary.
+
+        A cheap, language-agnostic signal: an English query scores ~1.0, a Spanish/Bengali/Chinese query against this
+        English corpus scores low, and BM25 on it only adds noise to the fusion."""
+        tokens = self._bm25s.tokenize([query], stopwords="en", show_progress=False, return_ids=False)[0]
+        if not tokens:
+            return 0.0
+        vocab = self.retriever.vocab_dict
+        return sum(token in vocab for token in tokens) / len(tokens)
+
     def search(self, query: str, k: int = 100) -> tuple[list[int], list[float]]:
         tokens = self._bm25s.tokenize([query], stopwords="en", show_progress=False)
         if not tokens.vocab or all(len(ids) == 0 for ids in tokens.ids):
@@ -241,7 +252,7 @@ class MultimodalRAG:
     # --- hybrid ----------------------------------------------------------------------------------------------
     def search(self, query_text: str | None = None, query_image: Image.Image | None = None, k: int = 20,
                candidates: int = 100, use_bm25: bool = True, rewrite_image_query: bool = True,
-               rrf_k: int = 60, bm25_weight: float = 1.0) -> RetrievalResult:
+               rrf_k: int = 60, bm25_weight: float = 1.0, bm25_min_coverage: float = 0.0) -> RetrievalResult:
         query_text = query_text.strip() if query_text and query_text.strip() else None
         if query_text is None and query_image is None:
             raise ValueError("Please provide a text query, an image query or both.")
@@ -263,6 +274,9 @@ class MultimodalRAG:
             lexical_query = self.describe_image(query_image)
             timings["image_rewrite_s"] = round(time.time() - start, 3)
 
+        if use_bm25 and lexical_query and bm25_min_coverage > 0:
+            timings["bm25_coverage"] = round(self.bm25.vocabulary_coverage(lexical_query), 3)
+            use_bm25 = timings["bm25_coverage"] >= bm25_min_coverage
         if use_bm25 and lexical_query:
             start = time.time()
             bm25_ranking = self.bm25_search(lexical_query, k=candidates)[0]

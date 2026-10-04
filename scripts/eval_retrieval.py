@@ -22,7 +22,7 @@ from mmrag import evaluation as E, pipeline as P  # noqa: E402
 parser = argparse.ArgumentParser()
 parser.add_argument("--queries", default=str(E.QUERIES_FILE))
 parser.add_argument("--query-sets", default="title,paraphrase,es,bn,zh")
-parser.add_argument("--methods", default=None, help="comma separated subset of method names (default: all)")
+parser.add_argument("--methods", default=None, help="semicolon separated subset of method names (default: all)")
 parser.add_argument("--num-queries", type=int, default=200)
 parser.add_argument("--num-rerank-queries", type=int, default=50)
 parser.add_argument("--num-slowest-queries", type=int, default=25, help="for image+text reranking (~17s per query)")
@@ -70,7 +70,7 @@ METHODS = {
         (lambda q: rag.rerank(q, rag.search(query_text=q, k=100), top_n=TOP_N, use_images=False), SLOW),
 }
 if args.methods:
-    METHODS = {name: METHODS[name] for name in args.methods.split(",")}
+    METHODS = {name: METHODS[name] for name in args.methods.split(";")}
 
 
 rag.search(query_text="warm up query")  # first CUDA calls are slow
