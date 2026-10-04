@@ -66,6 +66,10 @@ METHODS = {
     "bm25 only": (lambda q: P.RetrievalResult(*rag.bm25_search(q, k=100)), FAST),
     "improved: hybrid (dense + bm25, RRF)": (lambda q: rag.search(query_text=q, k=100), FAST),
     "improved: hybrid (bm25 weight 0.5)": (lambda q: rag.search(query_text=q, k=100, bm25_weight=0.5), FAST),
+    "improved: gated hybrid (bm25 if coverage >= 0.8)":
+        (lambda q: rag.search(query_text=q, k=100, bm25_min_coverage=0.8), FAST),
+    "improved: gated hybrid + rerank (text)":
+        (lambda q: rag.rerank(q, rag.search(query_text=q, k=100, bm25_min_coverage=0.8), top_n=TOP_N, use_images=False), SLOW),
     "improved: hybrid + rerank (text)":
         (lambda q: rag.rerank(q, rag.search(query_text=q, k=100), top_n=TOP_N, use_images=False), SLOW),
 }
