@@ -1,0 +1,187 @@
+name: mmrag
+x-env: &env
+  API_KEY: ${API_KEY:?Run python manage.py init-env first}
+  ADMIN_KEY: ${ADMIN_KEY:?Run python manage.py init-env first}
+  DEPLOYMENT_REVISION: ${DEPLOYMENT_REVISION:-unrecorded}
+  GPU_SERIALIZE: ${GPU_SERIALIZE:-1}
+  GPU_LOCK_PATH: /gpu-lock/inference.lock
+  MODEL_API_CONCURRENCY: ${MODEL_API_CONCURRENCY:-1}
+  RAG_CONCURRENCY: ${RAG_CONCURRENCY:-1}
+x-api: &api
+  image: mmrag-api:deployment-v1
+  build: {context: ., dockerfile: Dockerfile.api}
+  environment: *env
+  init: true
+  restart: unless-stopped
+  stop_grace_period: 620s
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  healthcheck: &api-health
+    test: [CMD, python, -c, "import urllib.request,os; urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8000/readyz',headers={'X-API-Key':os.environ['API_KEY']}),timeout=10)"]
+    interval: 20s
+    timeout: 12s
+    retries: 6
+    start_period: 30s
+  logging: &logs
+    driver: json-file
+    options: {max-size: 10m, max-file: '3'}
+x-triton: &triton
+  image: mmrag-triton:deployment-v1
+  build:
+    context: .
+    dockerfile: Dockerfile.triton
+    args: {TRITON_IMAGE: '${TRITON_IMAGE:-nvcr.io/nvidia/tritonserver:26.07-py3}'}
+  environment: &triton-env
+    GPU_SERIALIZE: ${GPU_SERIALIZE:-1}
+    GPU_LOCK_PATH: /gpu-lock/inference.lock
+    MODEL_MICROBATCH: ${MODEL_MICROBATCH:-2}
+  volumes: [hf-cache:/cache/hf, gpu-lock:/gpu-lock]
+  shm_size: 2gb
+  init: true
+  restart: unless-stopped
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  logging: *logs
+  depends_on: {storage-init: {condition: service_completed_successfully}}
+  healthcheck: &triton-health
+    test: [CMD, python3, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v2/health/ready',timeout=10)"]
+    interval: 20s
+    timeout: 12s
+    retries: 6
+    start_period: 1200s
+services:
+  storage-init:
+    image: mmrag-api:deployment-v1
+    build: {context: ., dockerfile: Dockerfile.api}
+    user: '0:0'
+    command: [python, -c, "import os; [os.chown(p,10001,10001) for p in ['/cache/hf','/gpu-lock']]"]
+    volumes: [hf-cache:/cache/hf, gpu-lock:/gpu-lock]
+    restart: 'no'
+  triton-embed:
+    <<: *triton
+    command: [tritonserver, --model-repository=/app/models, --model-control-mode=explicit, --load-model=embed, --strict-readiness=true, --allow-grpc=false, --exit-on-error=true]
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, device_ids: ['${EMBED_GPU:-0}'], capabilities: [gpu]}]
+  triton-rerank:
+    <<: *triton
+    command: [tritonserver, --model-repository=/app/models, --model-control-mode=explicit, --load-model=rerank, --strict-readiness=true, --allow-grpc=false, --exit-on-error=true]
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, device_ids: ['${RERANK_GPU:-0}'], capabilities: [gpu]}]
+  vllm:
+    image: ${VLLM_IMAGE:-vllm/vllm-openai:v0.27.0}
+    user: '10001:10001'
+    entrypoint: [python3, /app/start-vllm.py]
+    environment:
+      HF_HOME: /cache/hf
+      HOME: /tmp
+      API_KEY: ${API_KEY}
+      VLLM_API_KEY: ${API_KEY}
+      GPU_SERIALIZE: ${GPU_SERIALIZE:-1}
+      GPU_LOCK_PATH: /gpu-lock/inference.lock
+    command:
+      - Qwen/Qwen3.5-4B
+      - --revision=851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+      - --served-model-name=Qwen/Qwen3.5-4B
+      - --dtype=bfloat16
+      - --gpu-memory-utilization=${VLLM_GPU_MEMORY_UTILIZATION:-0.44}
+      - --max-model-len=${VLLM_MAX_MODEL_LEN:-8192}
+      - --max-num-seqs=${VLLM_MAX_NUM_SEQS:-1}
+      - --max-num-batched-tokens=2048
+      - --no-enable-prefix-caching
+      - --enable-chunked-prefill
+      - --enforce-eager
+      - --limit-mm-per-prompt={"image":1,"video":0}
+      - --mm-processor-kwargs={"max_pixels":313600}
+      - --reasoning-parser=qwen3
+      - --enable-auto-tool-choice
+      - --tool-call-parser=qwen3_coder
+      - '--default-chat-template-kwargs={"enable_thinking":false}'
+    volumes: [hf-cache:/cache/hf, gpu-lock:/gpu-lock, './start-vllm.py:/app/start-vllm.py:ro']
+    shm_size: 4gb
+    init: true
+    restart: unless-stopped
+    depends_on: {storage-init: {condition: service_completed_successfully}}
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, device_ids: ['${GEN_GPU:-0}'], capabilities: [gpu]}]
+    healthcheck:
+      test: [CMD, python3, -c, "import urllib.request,os; urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8000/health',headers={'Authorization':'Bearer '+os.environ['API_KEY']}),timeout=10)"]
+      interval: 20s
+      timeout: 12s
+      retries: 6
+      start_period: 1200s
+    logging: *logs
+  embeddings:
+    <<: *api
+    environment: {<<: *env, SERVICE_ROLE: embeddings, MODEL_URL: 'http://triton-embed:8000'}
+    depends_on: {triton-embed: {condition: service_healthy}}
+  reranking:
+    <<: *api
+    environment: {<<: *env, SERVICE_ROLE: reranking, MODEL_URL: 'http://triton-rerank:8000'}
+    depends_on: {triton-rerank: {condition: service_healthy}}
+  generation:
+    <<: *api
+    environment: {<<: *env, SERVICE_ROLE: generation, MODEL_URL: 'http://vllm:8000'}
+    volumes: [gpu-lock:/gpu-lock]
+    depends_on: {vllm: {condition: service_healthy}}
+  qdrant:
+    image: qdrant/qdrant:v1.19.1
+    environment: {QDRANT__SERVICE__API_KEY: '${API_KEY}'}
+    volumes: [qdrant-data:/qdrant/storage]
+    restart: unless-stopped
+    logging: *logs
+  postgres:
+    image: postgres:18-bookworm
+    environment: {POSTGRES_USER: mmrag, POSTGRES_DB: mmrag, POSTGRES_PASSWORD: '${POSTGRES_PASSWORD:?Database secret required}'}
+    volumes: [postgres-data:/var/lib/postgresql]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U mmrag -d mmrag']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    logging: *logs
+  retrieval:
+    <<: *api
+    environment: {<<: *env, SERVICE_ROLE: retrieval, INDEX_DIR: /data/indexes}
+    volumes: [indexes:/data/indexes]
+    depends_on: {qdrant: {condition: service_started}, embeddings: {condition: service_healthy}}
+  rag:
+    <<: *api
+    environment: {<<: *env, SERVICE_ROLE: rag}
+    depends_on:
+      retrieval: {condition: service_healthy}
+      reranking: {condition: service_healthy}
+      generation: {condition: service_healthy}
+  jobs:
+    <<: *api
+    environment:
+      <<: *env
+      SERVICE_ROLE: jobs
+      DATABASE_URL: postgresql+psycopg://mmrag:${POSTGRES_PASSWORD}@postgres:5432/mmrag
+    depends_on: {postgres: {condition: service_healthy}}
+  worker:
+    <<: *api
+    environment:
+      <<: *env
+      DATABASE_URL: postgresql+psycopg://mmrag:${POSTGRES_PASSWORD}@postgres:5432/mmrag
+    command: [python, -m, stack.worker]
+    healthcheck: {disable: true}
+    depends_on: {jobs: {condition: service_healthy}}
+  edge:
+    image: nginx:1.28-alpine
+    ports: ['127.0.0.1:${HTTP_PORT:-8080}:8080']
+    volumes: ['./nginx.conf:/etc/nginx/nginx.conf:ro']
+    restart: unless-stopped
+    logging: *logs
+volumes:
+  hf-cache:
+  gpu-lock:
+  qdrant-data:
+  postgres-data:
+  indexes:
