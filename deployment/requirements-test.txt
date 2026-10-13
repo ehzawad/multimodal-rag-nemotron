@@ -6,5 +6,5 @@ pydantic==2.13.4
 numpy==2.3.5
 Pillow==12.3.0
 SQLAlchemy==2.0.50
-pytest==9.0.2
+pytest==9.0.3
 PyYAML==6.0.3
